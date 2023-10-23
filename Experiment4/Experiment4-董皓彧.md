@@ -4,10 +4,10 @@
 gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0
 Visual Stdio Code 1.83.1
 ```
-作业的github地址: 
+作业仓库地址: 
 [https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4)
 ## 必做题
-### compulsive/Experiment4-1
+### Experiment4-1
 代码: 
 ```c
 #include<stdio.h>
@@ -51,7 +51,7 @@ input x y: x = 0.000000, y = 0.000000
 f(x) = 0.000000
 ```
 
-### compulsive/Experiment4-2
+### Experiment4-2
 代码: 
 ```c
 #include<stdio.h>
@@ -83,7 +83,7 @@ int main() {
 (3<x<5 || y>3 && y<2) == true
 ```
 
-### compulsive/Experiment4-3
+### Experiment4-3
 代码: 
 ```c
 #include<stdio.h>
@@ -152,7 +152,7 @@ int main() {
 ```
 
 ## 选做题
-### optional/Optional-Experiment4-1
+### Optional-Experiment4-1
 代码: 
 ```c
 #include<stdio.h>

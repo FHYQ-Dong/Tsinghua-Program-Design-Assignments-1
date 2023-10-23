@@ -58,12 +58,12 @@ class ProjectReportCreater():
 
     def get_one_experiment_result(self, Experiment:dict):
         ExperimentResult = {}
-        with open(os.path.join(self.directory, Experiment['Name']+'.c'), 'r', encoding='utf-8') as f:
+        with open(os.path.join(self.directory, Experiment['Path']+'.c'), 'r', encoding='utf-8') as f:
             code = f.read()
             ExperimentResult['Code'] = code
         Inputs, Outputs = Experiment['Inputs'], []
         for Input in Inputs:
-            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Name']+'.exe'), input=Input.encode()).decode()
+            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Path']+'.exe'), input=Input.encode()).decode()
             Output = Output.replace('\r\n', '\n')
             if Output[-1] == '\n':
                 Output = Output[:-1]
@@ -78,7 +78,7 @@ class ProjectReportCreater():
         self.mdCreater.markdown_write_title(self.Name)
         self.mdCreater.markdown.write('环境: \n')
         self.mdCreater.markdown_write_code('\n'.join(self.Environment), 'txt')
-        self.mdCreater.markdown.write('作业的github地址: \n')
+        self.mdCreater.markdown.write('作业仓库地址: \n')
         self.mdCreater.markdown_write_link(self.Url, self.Url)
         self.mdCreater.markdown_write_newline()
         self.mdCreater.markdown_write_subtitle('必做题')
