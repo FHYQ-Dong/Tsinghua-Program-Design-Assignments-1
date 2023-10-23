@@ -24,7 +24,7 @@
 
    其中最后的 `.` 替换为你的 `Project.conf` 文件所在目录。
 
-4. 程序会在 `Project.conf` 目录下生成一个 `markdown` 文件，可以用 `Typora` 等应用转为 `pdf`。
+4. 程序会在 `Project.conf` 所在目录下生成一个 `markdown` 文件，可以用 `Typora` 等应用转为 `pdf`。
 ## Project.conf 参数解释
 
 1. `Name`：报告名称；
