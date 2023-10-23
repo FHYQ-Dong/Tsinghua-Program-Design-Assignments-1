@@ -60,9 +60,31 @@ dkms.conf
 # build
 **/build
 
-#cmake
+# cmake
 **/CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 CMakeLists.txt.user
+
+# python
+**/__pycache__
+*.py[cod]
+**/*venv*
+**/*env*
+**/.pytest_cache
+**/.mypy_cache
+**/.coverage
+**/.cache
+**/.eggs
+**/.tox
+**/.hypothesis
+**/.mypy_cache
+**/.pytest_cache
+**/.coverage
+**/.cache
+**/.eggs
+**/.tox
+**/.hypothesis
+**/.mypy_cache
+**/.pytest_cache
