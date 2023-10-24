@@ -44,9 +44,13 @@ class MarkdownCreater:
 class ProjectReportCreater():
     def __init__(self, directory) -> None:
         self.directory = directory
-        self.configFile = open(os.path.join(directory, 'Project.conf'), 'r', encoding='utf-8')
-        self.confargv = json.load(self.configFile)
-        self.configFile.close()
+        try:
+            self.configFile = open(os.path.join(directory, 'Project.conf'), 'r', encoding='utf-8')
+            self.confargv = json.load(self.configFile)
+            self.configFile.close()
+        except:
+            logger.error('Project.conf not found.')
+            exit(1)
 
         self.Name = self.confargv['Name']
         self.Url = self.confargv['Url']
