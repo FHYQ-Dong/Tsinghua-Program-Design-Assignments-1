@@ -37,7 +37,8 @@
 
    1. `compulsive`：必做题：
       1. `Name`：该题名称；
-      2. `Path`：相对于本周作业根文件夹的相对路径；
-      3. `Inputs`：标准输入，由于可能需要多组输入，故用列表传入（可参见[我的第三次作业选做题](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/blob/main/Experiment3/Experiment3-董皓彧.md#选做题)）
-
+      2. `Path-to-C`：源文件相对于本周作业根文件夹的相对路径；
+      3. `Path-to-EXE`：可执行文件相对于本周作业根文件夹的相对路径；
+      4. `Inputs`：标准输入，由于可能需要多组输入，故用列表传入（可参见[我的第三次作业选做题](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/blob/main/Experiment3/Experiment3-董皓彧.md#选做题)）
+      
    2. `optional`：选做题，参数与必做题相同 
