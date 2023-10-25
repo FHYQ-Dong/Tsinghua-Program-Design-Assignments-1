@@ -65,12 +65,22 @@ class ProjectReportCreater():
         with open(os.path.join(self.directory, Experiment['Path-to-C']), 'r', encoding='utf-8') as f:
             code = f.read()
             ExperimentResult['Code'] = code
-        Inputs, Outputs = Experiment['Inputs'], []
-        for Input in Inputs:
-            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Path-to-EXE']), input=Input.encode()).decode()
+        Inputs, Outputs = [], []
+        for Input in Experiment['Inputs']:
+            Input_argv = ""
+            Display_Input = ""
+            for each_input_prompt in Input:
+                Input_argv += each_input_prompt['input']
+                Display_Input += each_input_prompt['prompt'] + each_input_prompt['input']
+            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Path-to-EXE']), input=Input_argv.encode()).decode()
             Output = Output.replace('\r\n', '\n')
+            for each_input_prompt in Input:
+                Output = Output.replace(each_input_prompt['prompt'], '')
             if Output[-1] == '\n':
                 Output = Output[:-1]
+            if Display_Input and Display_Input[-1] == '\n':
+                Display_Input = Display_Input[:-1]
+            Inputs.append(Display_Input)
             Outputs.append(Output)
 
         ExperimentResult['Input'] = Inputs

@@ -1,21 +1,14 @@
 # Experiment4-董皓彧
-
-环境:
-
+环境: 
 ```txt
 gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0
 Visual Stdio Code 1.83.1
 ```
-
-作业仓库地址:
+作业仓库地址: 
 [https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4)
-
 ## 必做题
-
 ### Experiment4-1
-
-代码:
-
+代码: 
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -34,40 +27,31 @@ void printf_sin_cos() {
     printf("input x y: \n");
     double x = 0, y = 0;
     scanf("%lf %lf", &x, &y);
-    printf("f(x) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
+    printf("f(x, y) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
     return;
 }
 
 int main() {
     print_exp();
-    printf("\n");
     printf_sin_cos();
     return 0;
 }
 ```
-
-输入1:
-
+输入1: 
 ```txt
 input x: 
 1
-
 input x y: 
 1 1
 ```
-
-输出1:
-
+输出1: 
 ```txt
 f(x) = 0.241971
-
-f(x) = -0.126134
+f(x, y) = -0.126134
 ```
 
 ### Experiment4-2
-
-代码:
-
+代码: 
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -83,15 +67,11 @@ int main() {
     return 0;
 }
 ```
-
-输入1:
-
+输入1: 
 ```txt
 
 ```
-
-输出1:
-
+输出1: 
 ```txt
 (!x && x!=0) == false
 (!(x==a) && (y==b) && 0) == false
@@ -103,9 +83,7 @@ int main() {
 ```
 
 ### Experiment4-3
-
-代码:
-
+代码: 
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -141,7 +119,7 @@ bool check() {
                 if (argument_a(b, ha) && argument_b(c, hb) && argument_c(c, hc)) {
                     printf("若甲说%s话, 乙说%s话, 丙说%s话, 则:\n", ha?"真":"假", hb?"真":"假", hc?"真":"假");
                 }
-              
+                
             }
         }
     }
@@ -158,15 +136,11 @@ int main() {
     return 0;
 }
 ```
-
-输入1:
-
+输入1: 
 ```txt
 
 ```
-
-输出1:
-
+输出1: 
 ```txt
 若甲说假话, 乙说假话, 丙说真话, 则:
 可能的泄密者是甲
@@ -177,11 +151,8 @@ int main() {
 ```
 
 ## 选做题
-
 ### Optional-Experiment4-1
-
-代码:
-
+代码: 
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -210,15 +181,12 @@ end:
 }
 
 ```
-
-输入1:
-
+输入1: 
 ```txt
 
 ```
-
-输出1:
-
+输出1: 
 ```txt
 49只母鸡, 2只公鸡, 49只小鸡
 ```
+

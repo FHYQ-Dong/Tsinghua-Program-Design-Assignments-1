@@ -15,13 +15,12 @@ void printf_sin_cos() {
     printf("input x y: \n");
     double x = 0, y = 0;
     scanf("%lf %lf", &x, &y);
-    printf("f(x) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
+    printf("f(x, y) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
     return;
 }
 
 int main() {
     print_exp();
-    printf("\n");
     printf_sin_cos();
     return 0;
 }
