@@ -15,7 +15,7 @@ Visual Stdio Code 1.83.1
 #define pi acos(-1)
 
 void print_exp() {
-    printf("input x: ");
+    printf("input x: \n");
     double x = 0;
     scanf("%lf", &x);
     double tmp = exp(-0.5 * x * x);
@@ -24,10 +24,9 @@ void print_exp() {
 }
 
 void printf_sin_cos() {
-    printf("input x y: ");
+    printf("input x y: \n");
     double x = 0, y = 0;
     scanf("%lf %lf", &x, &y);
-    printf("x = %lf, y = %lf\n", x, y);
     printf("f(x) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
     return;
 }
@@ -41,14 +40,16 @@ int main() {
 ```
 输入1: 
 ```txt
-
+1
+1 1
 ```
 输出1: 
 ```txt
-input x: f(x) = 0.398942
+input x: 
+f(x) = 0.241971
 
-input x y: x = 0.000000, y = 0.000000
-f(x) = 0.000000
+input x y: 
+f(x) = -0.126134
 ```
 
 ### Experiment4-2
