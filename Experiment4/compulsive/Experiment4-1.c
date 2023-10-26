@@ -3,7 +3,6 @@
 #define pi acos(-1)
 
 void print_exp() {
-    printf("input x: \n");
     double x = 0;
     scanf("%lf", &x);
     double tmp = exp(-0.5 * x * x);
@@ -12,7 +11,6 @@ void print_exp() {
 }
 
 void printf_sin_cos() {
-    printf("input x y: \n");
     double x = 0, y = 0;
     scanf("%lf %lf", &x, &y);
     printf("f(x, y) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));

@@ -8,6 +8,10 @@ Visual Stdio Code 1.83.1
 [https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment4)
 ## 必做题
 ### Experiment4-1
+题目: 
+```txt
+输入函数参数x, (x, y), 计算函数值并输出
+```
 代码: 
 ```c
 #include<stdio.h>
@@ -15,7 +19,6 @@ Visual Stdio Code 1.83.1
 #define pi acos(-1)
 
 void print_exp() {
-    printf("input x: \n");
     double x = 0;
     scanf("%lf", &x);
     double tmp = exp(-0.5 * x * x);
@@ -24,7 +27,6 @@ void print_exp() {
 }
 
 void printf_sin_cos() {
-    printf("input x y: \n");
     double x = 0, y = 0;
     scanf("%lf %lf", &x, &y);
     printf("f(x, y) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
@@ -39,10 +41,9 @@ int main() {
 ```
 输入1: 
 ```txt
-input x: 
 1
-input x y: 
 1 1
+
 ```
 输出1: 
 ```txt
@@ -51,6 +52,10 @@ f(x, y) = -0.126134
 ```
 
 ### Experiment4-2
+题目: 
+```txt
+写出下列C表达式的值并输出
+```
 代码: 
 ```c
 #include<stdio.h>
@@ -83,6 +88,13 @@ int main() {
 ```
 
 ### Experiment4-3
+题目: 
+```txt
+判断谁是发帖者: 
+甲说：乙发的；
+乙说：丙发的；
+丙说：乙说谎。
+```
 代码: 
 ```c
 #include<stdio.h>
@@ -152,6 +164,10 @@ int main() {
 
 ## 选做题
 ### Optional-Experiment4-1
+题目: 
+```txt
+某食堂管理员带1000元人民币去市场买鸡，市场价每只小鸡5元，每只公鸡10元，每只母鸡15元。该管理员打算正好买100只鸡，每种鸡的数目都要大于零，并且尽可能多买母鸡。请编程序，替他制定采购方案。
+```
 代码: 
 ```c
 #include<stdio.h>

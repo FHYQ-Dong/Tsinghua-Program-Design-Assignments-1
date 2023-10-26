@@ -31,6 +31,9 @@ class MarkdownCreater:
         self.markdown.write(f'[{text}]({link})')
     def markdown_write_code(self, code, code_lang):
         self.markdown.write(f'```{code_lang}\n{code}\n```\n')
+    def markdown_write_problem(self, problem):
+        self.markdown.write(f'题目: \n')
+        self.markdown_write_code(problem, 'txt')
     def markdown_write_program(self, program, program_lang):
         self.markdown.write(f'代码: \n')
         self.markdown_write_code(program, program_lang)
@@ -65,26 +68,18 @@ class ProjectReportCreater():
         with open(os.path.join(self.directory, Experiment['Path-to-C']), 'r', encoding='utf-8') as f:
             code = f.read()
             ExperimentResult['Code'] = code
+
         Inputs, Outputs = [], []
         for Input in Experiment['Inputs']:
-            Input_argv = ""
-            Display_Input = ""
-            for each_input_prompt in Input:
-                Input_argv += each_input_prompt['input']
-                Display_Input += each_input_prompt['prompt'] + each_input_prompt['input']
-            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Path-to-EXE']), input=Input_argv.encode()).decode()
+            Output = subprocess.check_output(os.path.join(self.directory, Experiment['Path-to-EXE']), input=Input.encode()).decode()
             Output = Output.replace('\r\n', '\n')
-            for each_input_prompt in Input:
-                Output = Output.replace(each_input_prompt['prompt'], '')
             if Output[-1] == '\n':
                 Output = Output[:-1]
-            if Display_Input and Display_Input[-1] == '\n':
-                Display_Input = Display_Input[:-1]
-            Inputs.append(Display_Input)
+            Inputs.append(Input)
             Outputs.append(Output)
-
         ExperimentResult['Input'] = Inputs
         ExperimentResult['Output'] = Outputs
+
         logger.info(f'{Experiment["Name"]} done.')
         return ExperimentResult
     
@@ -95,20 +90,24 @@ class ProjectReportCreater():
         self.mdCreater.markdown.write('作业仓库地址: \n')
         self.mdCreater.markdown_write_link(self.Url, self.Url)
         self.mdCreater.markdown_write_newline()
+
         self.mdCreater.markdown_write_subtitle('必做题')
         for Experiment in self.Experiments['compulsive']:
             self.mdCreater.markdown_write_subsubtitle(Experiment['Name'])
+            self.mdCreater.markdown_write_problem(Experiment['Problem'])
             ExperimentResult = self.get_one_experiment_result(Experiment)
             self.mdCreater.markdown_write_program(ExperimentResult['Code'], 'c')
             for idx in range(len(ExperimentResult['Input'])):
                 self.mdCreater.markdown_write_input(ExperimentResult['Input'][idx], idx+1)
                 self.mdCreater.markdown_write_output(ExperimentResult['Output'][idx], idx+1)
             self.mdCreater.markdown_write_newline()
+
         if 'optional' in self.Experiments:
             if len(self.Experiments['optional']) > 0:
                 self.mdCreater.markdown_write_subtitle('选做题')
                 for Experiment in self.Experiments['optional']:
                     self.mdCreater.markdown_write_subsubtitle(Experiment['Name'])
+                    self.mdCreater.markdown_write_problem(Experiment['Problem'])
                     ExperimentResult = self.get_one_experiment_result(Experiment)
                     self.mdCreater.markdown_write_program(ExperimentResult['Code'], 'c')
                     for idx in range(len(ExperimentResult['Input'])):
