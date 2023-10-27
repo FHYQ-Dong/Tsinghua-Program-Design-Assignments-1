@@ -1,0 +1,111 @@
+{
+    "Name": "Experiment5-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment5",
+    "Environment": [
+        "gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+        "Visual Stdio Code 1.83.1"
+    ],
+    "Experiments": {
+        "compulsive": [
+            {
+                "Name": "Experiment5-1",
+                "Problem": "输入三个整数，判断它们能否构成三角形（等边，等腰，一般，无法）",
+                "Input-Format": "一行，三个整数，用空格隔开",
+                "Output-Format": "一行，三角形类型，或者无法构成三角形",
+                "Path-to-C": "compulsive/Experiment5-1.c",
+                "Path-to-EXE": "compulsive/Experiment5-1.exe",
+                "Inputs": [
+                    "1 1 1",
+                    "1 2 2",
+                    "2 3 4",
+                    "1 2 3"
+                ]
+            },
+            {
+                "Name": "Experiment5-2",
+                "Problem": "输入运算符@和四个整数a, b, c, d，计算a@b@c@d的值",
+                "Input-Format": "一行，@和四个整数，用空格隔开",
+                "Output-Format": "一行，计算结果，或者错误信息",
+                "Path-to-C": "compulsive/Experiment5-2.c",
+                "Path-to-EXE": "compulsive/Experiment5-2.exe",
+                "Inputs": [
+                    "+ 1 2 3 4",
+                    "- 5 6 7 8",
+                    "* 9 10 11 12",
+                    "/ 13 14 15 16",
+                    "/ 1 2 3 0"
+                ]
+            },
+            {
+                "Name": "Experiment5-3",
+                "Problem": "给出一个int型正整数x：\n（1）求出x的位数；\n（2）打印出每一位数字；\n（3）逆向打印各位数字",
+                "Input-Format": "一行，一个正整数",
+                "Output-Format": "三行，分别是位数，每一位数字，逆向每一位数字",
+                "Path-to-C": "compulsive/Experiment5-3.c",
+                "Path-to-EXE": "compulsive/Experiment5-3.exe",
+                "Inputs": [
+                    "12345678",
+                    "1",
+                    "100000",
+                    "1000000000",
+                    "64648513",
+                    "5631355",
+                    "789645",
+                    "89645348",
+                    "789534861",
+                    "654321"
+                ]
+            }
+        ],
+        "optional": [
+            {
+                "Name": "Optional-Experiment5-1",
+                "Problem": "将数字时间用英文表述",
+                "Input-Format": "一行，一个数字时间，格式为HH\tMM（用Tab隔开）",
+                "Output-Format": "一行，英文表述",
+                "Path-to-C": "optional/Optional-Experiment5-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment5-1.exe",
+                "Inputs": [
+                    "00\t00",
+                    "01\t10",
+                    "10\t19",
+                    "21\t30",
+                    "23\t59"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment5-2",
+                "Problem": "存在4个高塔，具体信息见课件，给出一个坐标，判断其高度",
+                "Input-Format": "一行，两个整数，用空格隔开，表示某点的坐标",
+                "Output-Format": "一行，高度",
+                "Path-to-C": "optional/Optional-Experiment5-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment5-2.exe",
+                "Inputs": [
+                    "0 0",
+                    "1 1",
+                    "2 2",
+                    "1.5 1.5",
+                    "-2 2",
+                    "-1.5 1.5"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment5-3",
+                "Problem": "统计一个int型正整数x中数字5、6、7出现的次数",
+                "Input-Format": "一行，一个正整数",
+                "Output-Format": "一行，三个数字，分别是5、6、7出现的次数，用空格隔开",
+                "Path-to-C": "optional/Optional-Experiment5-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment5-3.exe",
+                "Inputs": [
+                    "0",
+                    "11111111",
+                    "123456789",
+                    "77777",
+                    "5555555",
+                    "666666666",
+                    "1234890"
+                ]
+            }
+        ]
+    }
+}

@@ -1,28 +1,23 @@
 #include<stdio.h>
-#include<math.h>
-#define pi acos(-1)
+#define true 1
+#define false 0
+typedef int bool;
 
-void print_exp() {
-    printf("input x: ");
-    double x = 0;
-    scanf("%lf", &x);
-    double tmp = exp(-0.5 * x * x);
-    printf("f(x) = %lf\n", (1/sqrt(2 * pi)) * tmp);
-    return;
-}
-
-void printf_sin_cos() {
-    printf("input x y: ");
-    double x = 0, y = 0;
-    scanf("%lf %lf", &x, &y);
-    printf("x = %lf, y = %lf\n", x, y);
-    printf("f(x) = %lf\n", (double)(1)/3 * sin(x*x + y*y) * cos(x+y));
-    return;
+bool check_tri(int x, int y, int z) {
+    if (x + y > z && x + z > y && y + z > x) {
+        return true;
+    }
+    return false;
 }
 
 int main() {
-    print_exp();
-    printf("\n");
-    printf_sin_cos();
+    int a, b, c;
+    scanf("%d%d%d", &a, &b, &c);
+    if(check_tri(a, b, c)) {
+        if (a==b && a==c) printf("Equilateral triangle\n");
+        else if (a==b || a==c || b==c) printf("Isosceles triangle\n");
+        else printf("Triangle\n");
+    }
+    else printf("Not triangle\n");
     return 0;
 }

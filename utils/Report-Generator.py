@@ -32,15 +32,21 @@ class MarkdownCreater:
     def markdown_write_code(self, code, code_lang):
         self.markdown.write(f'```{code_lang}\n{code}\n```\n')
     def markdown_write_problem(self, problem):
-        self.markdown.write(f'题目: \n')
+        self.markdown.write(f'题目：\n')
         self.markdown_write_code(problem, 'txt')
+    def markdown_write_input_format(self, input_format):
+        self.markdown.write(f'输入格式：\n')
+        self.markdown_write_code(input_format, 'txt')
+    def markdown_write_output_format(self, output_format):
+        self.markdown.write(f'输出格式：\n')
+        self.markdown_write_code(output_format, 'txt')
     def markdown_write_program(self, program, program_lang):
-        self.markdown.write(f'代码: \n')
+        self.markdown.write(f'代码：\n')
         self.markdown_write_code(program, program_lang)
     def markdown_write_input(self, input, input_id):
-        self.markdown.write(f'输入{input_id}: \n```txt\n{input}\n```\n')
+        self.markdown.write(f'输入{input_id}：\n```txt\n{input}\n```\n')
     def markdown_write_output(self, output, output_id):
-        self.markdown.write(f'输出{output_id}: \n```txt\n{output}\n```\n')
+        self.markdown.write(f'输出{output_id}：\n```txt\n{output}\n```\n')
     def markdown_write_newline(self):
         self.markdown.write('\n')
 
@@ -48,11 +54,11 @@ class ProjectReportCreater():
     def __init__(self, directory) -> None:
         self.directory = directory
         try:
-            self.configFile = open(os.path.join(directory, 'Project.conf'), 'r', encoding='utf-8')
+            self.configFile = open(os.path.join(directory, 'Project.json'), 'r', encoding='utf-8')
             self.confargv = json.load(self.configFile)
             self.configFile.close()
         except:
-            logger.error('Project.conf not found.')
+            logger.error('Project.json not found.')
             exit(1)
 
         self.Name = self.confargv['Name']
@@ -85,9 +91,9 @@ class ProjectReportCreater():
     
     def write_report(self):
         self.mdCreater.markdown_write_title(self.Name)
-        self.mdCreater.markdown.write('环境: \n')
+        self.mdCreater.markdown.write('环境：\n')
         self.mdCreater.markdown_write_code('\n'.join(self.Environment), 'txt')
-        self.mdCreater.markdown.write('作业仓库地址: \n')
+        self.mdCreater.markdown.write('作业仓库地址：\n')
         self.mdCreater.markdown_write_link(self.Url, self.Url)
         self.mdCreater.markdown_write_newline()
 
@@ -95,6 +101,8 @@ class ProjectReportCreater():
         for Experiment in self.Experiments['compulsive']:
             self.mdCreater.markdown_write_subsubtitle(Experiment['Name'])
             self.mdCreater.markdown_write_problem(Experiment['Problem'])
+            self.mdCreater.markdown_write_input_format(Experiment['Input-Format'])
+            self.mdCreater.markdown_write_output_format(Experiment['Output-Format'])
             ExperimentResult = self.get_one_experiment_result(Experiment)
             self.mdCreater.markdown_write_program(ExperimentResult['Code'], 'c')
             for idx in range(len(ExperimentResult['Input'])):
@@ -108,6 +116,8 @@ class ProjectReportCreater():
                 for Experiment in self.Experiments['optional']:
                     self.mdCreater.markdown_write_subsubtitle(Experiment['Name'])
                     self.mdCreater.markdown_write_problem(Experiment['Problem'])
+                    self.mdCreater.markdown_write_input_format(Experiment['Input-Format'])
+                    self.mdCreater.markdown_write_output_format(Experiment['Output-Format'])
                     ExperimentResult = self.get_one_experiment_result(Experiment)
                     self.mdCreater.markdown_write_program(ExperimentResult['Code'], 'c')
                     for idx in range(len(ExperimentResult['Input'])):
