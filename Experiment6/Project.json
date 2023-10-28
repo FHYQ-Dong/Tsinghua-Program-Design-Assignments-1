@@ -1,0 +1,88 @@
+{
+    "Name": "Experiment6-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment6",
+    "Environment": [
+        "gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+        "Visual Stdio Code 1.83.1"
+    ],
+    "Experiments": {
+        "compulsive": [
+            {
+                "Name": "Experiment6-1",
+                "Problem": "求100以内的孪生素数",
+                "Input-Format": "无",
+                "Output-Format": "若干行，每行两个数，为孪生素数，小数在前",
+                "Path-to-C": "compulsive/Experiment6-1.c",
+                "Path-to-EXE": "compulsive/Experiment6-1.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Experiment6-2",
+                "Problem": "给出一个菱形的对角线长l，打印这个菱形。若l不是大于2的奇数，输出Input Error",
+                "Input-Format": "一个数，l",
+                "Output-Format": "菱形或Input Error",
+                "Path-to-C": "compulsive/Experiment6-2.c",
+                "Path-to-EXE": "compulsive/Experiment6-2.exe",
+                "Inputs": [
+                    "1",
+                    "3",
+                    "7",
+                    "10",
+                    "13"
+                ]
+            },
+            {
+                "Name": "Experiment6-3",
+                "Problem": "验证哥德巴赫猜想：给出一个不小于4的偶数N，输出两个质数a、b，使得N=a+b. 若N不是不小于4的偶数，输出Input Error",
+                "Input-Format": "一行，一个正整数",
+                "Output-Format": "一行，格式为N=a+b",
+                "Path-to-C": "compulsive/Experiment6-3.c",
+                "Path-to-EXE": "compulsive/Experiment6-3.exe",
+                "Inputs": [
+                    "2",
+                    "4",
+                    "11",
+                    "10032",
+                    "998244"
+                ]
+            }
+        ],
+        "optional": [
+            {
+                "Name": "Optional-Experiment6-1",
+                "Problem": "将数字时间用英文表述",
+                "Input-Format": "一行，一个数字时间，格式为HH\tMM（用Tab隔开）",
+                "Output-Format": "一行，英文表述",
+                "Path-to-C": "optional/Optional-Experiment6-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-1.exe",
+                "Inputs": [
+                    
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-2",
+                "Problem": "找出1–1000中仅包含5个因子（包括1和自身）的所有自然数，输出这些自然数的所有因子",
+                "Input-Format": "无",
+                "Output-Format": "若干行，每行以x: a1 a2 a3 a4 a5的格式输出符合条件的自然数和它的因子",
+                "Path-to-C": "optional/Optional-Experiment6-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-2.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-3",
+                "Problem": "统计一个int型正整数x中数字5、6、7出现的次数",
+                "Input-Format": "一行，一个正整数",
+                "Output-Format": "一行，三个数字，分别是5、6、7出现的次数，用空格隔开",
+                "Path-to-C": "optional/Optional-Experiment6-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-3.exe",
+                "Inputs": [
+                    
+                ]
+            }
+        ]
+    }
+}
