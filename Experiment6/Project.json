@@ -52,35 +52,75 @@
         "optional": [
             {
                 "Name": "Optional-Experiment6-1",
-                "Problem": "将数字时间用英文表述",
-                "Input-Format": "一行，一个数字时间，格式为HH\tMM（用Tab隔开）",
-                "Output-Format": "一行，英文表述",
+                "Problem": "某幼儿园按如下方法依次给A、B、C、D、E五个小孩发苹果。将全部苹果的一半再加二分之一个苹果发给第一个小孩；将剩下苹果的三分之一再加三分之一个苹果发给第二个小孩；将剩下苹果的四分之一再加四分之一个苹果发给第三个小孩；将剩下苹果的五分之一再加五分之一个苹果发给第四个小孩；将最后剩下的11个苹果发给第五个小孩。每个小孩得到的苹果数均为整数。确定原来共有多少个苹果？每个小孩各得到多少个苹果？",
+                "Input-Format": "无",
+                "Output-Format": "6行，分别为：原来共有多少个苹果、每个小孩各得到多少个苹果",
                 "Path-to-C": "optional/Optional-Experiment6-1.c",
                 "Path-to-EXE": "optional/Optional-Experiment6-1.exe",
-                "Inputs": [
-                    
-                ]
-            },
-            {
-                "Name": "Optional-Experiment6-2",
-                "Problem": "找出1–1000中仅包含5个因子（包括1和自身）的所有自然数，输出这些自然数的所有因子",
-                "Input-Format": "无",
-                "Output-Format": "若干行，每行以x: a1 a2 a3 a4 a5的格式输出符合条件的自然数和它的因子",
-                "Path-to-C": "optional/Optional-Experiment6-2.c",
-                "Path-to-EXE": "optional/Optional-Experiment6-2.exe",
                 "Inputs": [
                     ""
                 ]
             },
             {
-                "Name": "Optional-Experiment6-3",
+                "Name": "Optional-Experiment6-2",
                 "Problem": "统计一个int型正整数x中数字5、6、7出现的次数",
                 "Input-Format": "一行，一个正整数",
                 "Output-Format": "一行，三个数字，分别是5、6、7出现的次数，用空格隔开",
+                "Path-to-C": "optional/Optional-Experiment6-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-2.exe",
+                "Inputs": [
+                    
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-3",
+                "Problem": "k(i) = i!, S(i) = k(1) + k(2) + ... + k(i)，输入正整数n（1<=n<=10），输出S(n)的值",
+                "Input-Format": "一个正整数n（1<=n<=10）",
+                "Output-Format": "一行，S(n) = ans",
                 "Path-to-C": "optional/Optional-Experiment6-3.c",
                 "Path-to-EXE": "optional/Optional-Experiment6-3.exe",
                 "Inputs": [
-                    
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-4",
+                "Problem": "有A, B, C, D, E, F 六个小朋友，现将三顶相同的白帽子，三顶相同的黑帽子分给他们，每人一顶。请编写程序计算不同分配方案的个数，并打印所有的分配方案",
+                "Input-Format": "无",
+                "Output-Format": "若干行，第一行为总方案数，之后每一行为一种方案",
+                "Path-to-C": "optional/Optional-Experiment6-4.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-4.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-5",
+                "Problem": "从键盘输入一个五位正整数，首先分离出该正整数中的每一位数字，然后用分离出的每位数字组成一个最接近40000的数和一个最接近60000的数。要求检查输入数据的合法性",
+                "Input-Format": "一个正整数",
+                "Output-Format": "一行或两行。若输入数据不合法，输出Input Error；若输入数据合法，输出两行，分别为最接近40000的数和最接近60000的数",
+                "Path-to-C": "optional/Optional-Experiment6-5.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-5.exe",
+                "Inputs": [
+                    "1",
+                    "1000000",
+                    "10000",
+                    "34567",
+                    "48935",
+                    "98765",
+                    "99999",
+                    "40000",
+                    "60000",
+                    "50000"
                 ]
             }
         ]
