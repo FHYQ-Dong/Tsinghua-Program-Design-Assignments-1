@@ -88,3 +88,9 @@ CMakeLists.txt.user
 **/.hypothesis
 **/.mypy_cache
 **/.pytest_cache
+
+# oj
+!**/oj
+!**/oj/**/*.in
+!**/oj/**/*.out
+!**/oj/**/*.zip
