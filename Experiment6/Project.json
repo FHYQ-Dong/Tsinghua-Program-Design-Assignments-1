@@ -63,22 +63,11 @@
             },
             {
                 "Name": "Optional-Experiment6-2",
-                "Problem": "统计一个int型正整数x中数字5、6、7出现的次数",
-                "Input-Format": "一行，一个正整数",
-                "Output-Format": "一行，三个数字，分别是5、6、7出现的次数，用空格隔开",
-                "Path-to-C": "optional/Optional-Experiment6-2.c",
-                "Path-to-EXE": "optional/Optional-Experiment6-2.exe",
-                "Inputs": [
-                    
-                ]
-            },
-            {
-                "Name": "Optional-Experiment6-3",
                 "Problem": "k(i) = i!, S(i) = k(1) + k(2) + ... + k(i)，输入正整数n（1<=n<=10），输出S(n)的值",
                 "Input-Format": "一个正整数n（1<=n<=10）",
                 "Output-Format": "一行，S(n) = ans",
-                "Path-to-C": "optional/Optional-Experiment6-3.c",
-                "Path-to-EXE": "optional/Optional-Experiment6-3.exe",
+                "Path-to-C": "optional/Optional-Experiment6-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-2.exe",
                 "Inputs": [
                     "1",
                     "2",
@@ -90,6 +79,17 @@
                     "8",
                     "9",
                     "10"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment6-3",
+                "Problem": "找出1–1000中仅包含5个因子（包括1和自身）的所有自然数，输出这些自然数的所有因子",
+                "Input-Format": "无",
+                "Output-Format": "若干行，每行第一个数为符合要求的自然数，之后为该自然数的所有因子",
+                "Path-to-C": "optional/Optional-Experiment6-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment6-3.exe",
+                "Inputs": [
+                    ""
                 ]
             },
             {
