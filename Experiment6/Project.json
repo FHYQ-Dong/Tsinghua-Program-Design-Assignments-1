@@ -63,7 +63,7 @@
             },
             {
                 "Name": "Optional-Experiment6-2",
-                "Problem": "k(i) = i!, S(i) = k(1) + k(2) + ... + k(i)，输入正整数n（1<=n<=10），输出S(n)的值",
+                "Problem": "k(i) = i!，S(i) = k(1) + k(2) + ... + k(i)，输入正整数n（1<=n<=10），输出S(n)的值",
                 "Input-Format": "一个正整数n（1<=n<=10）",
                 "Output-Format": "一行，S(n) = ans",
                 "Path-to-C": "optional/Optional-Experiment6-2.c",
