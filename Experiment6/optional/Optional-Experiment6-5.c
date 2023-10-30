@@ -27,6 +27,7 @@ void all_permutation(int ans, int depth) {
 
 int main() {
     scanf("%d", &x);
+    ans4 = x; ans6 = x;
     if (x <= 9999 || x>= 100000) {
         printf("Input Error\n");
         return 0;
@@ -36,7 +37,6 @@ int main() {
         x /= 10;
     }
     all_permutation(0, 0);
-    ans4 = x; ans6 = x;
     for (int i=1; i<=cnt; ++i) {
         if (abs(ans4 - 40000) > abs(alternative[i] - 40000)) ans4 = alternative[i];
         if (abs(ans6 - 60000) > abs(alternative[i] - 60000)) ans6 = alternative[i];
