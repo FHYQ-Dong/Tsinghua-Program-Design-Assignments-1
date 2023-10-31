@@ -45,7 +45,7 @@ class OjGenerator():
                     f.write(ExperimentResult['Input'][idx])
                 with open(os.path.join(self.directory, 'oj', Experiment['Name'], str(idx+1)+'.out'), 'w', encoding='utf-8') as f:
                     f.write(ExperimentResult['Output'][idx])
-             
+        
         for Experiment in self.Experiments['optional']:
             ExperimentResult = self.get_one_experiment_result(Experiment)
             if not os.path.isdir(os.path.join(self.directory, 'oj', Experiment['Name'])):
