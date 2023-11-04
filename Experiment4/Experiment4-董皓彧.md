@@ -122,26 +122,27 @@ void init(int x) {
 }
 
 bool check() {
-    bool result = false;
     for(int ha=0; ha<=1; ++ha) {
         for(int hb=0; hb<=1; ++hb) {
             for(int hc=0; hc<=1; ++hc) {
-                result |= argument_a(b, ha) && argument_b(c, hb) && argument_c(c, hc);
                 if (argument_a(b, ha) && argument_b(c, hb) && argument_c(c, hc)) {
                     printf("若甲说%s话, 乙说%s话, 丙说%s话, 则:\n", ha?"真":"假", hb?"真":"假", hc?"真":"假");
+                    return true;
                 }
-                
             }
         }
     }
-    return result;
+    return false;
 }
 
 int main() {
     bool flag = false;
     for(int i=1; i<=3; ++i) {
         init(i);
-        if(check()) printf("可能的泄密者是%s\n", i==1?"甲":i==2?"乙":"丙"), flag = true;
+        if(check()) {
+            printf("可能的泄密者是%s\n", i==1?"甲":i==2?"乙":"丙");
+            flag = true;
+        }
     }
     if(!flag) printf("没有泄密者\n");
     return 0;
