@@ -5,7 +5,7 @@
 #include<iostream>
 using namespace std;
 
-bool is_prime[1000001];
+bool is_prime[10000001];
 int N, T;
 
 void ertosthenes() {

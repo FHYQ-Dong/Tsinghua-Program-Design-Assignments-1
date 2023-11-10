@@ -1,0 +1,91 @@
+{
+    "Name": "Experiment7-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment7",
+    "Environment": [
+        "gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+        "Visual Stdio Code 1.83.1"
+    ],
+    "Experiments": {
+        "compulsive": [
+            {
+                "Name": "Experiment7-1",
+                "Problem": "求积分：",
+                "Input-Format": "无",
+                "Output-Format": "一行，一个 4 位小数，为积分结果",
+                "Path-to-C": "compulsive/Experiment7-1.c",
+                "Path-to-EXE": "compulsive/Experiment7-1.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Experiment7-2",
+                "Problem": "有 100 头水牛和 100 捆干草，站着的小水牛每头吃了 5 捆草，躺着的小水牛每头吃三捆草，3 头老水牛共吃 1 捆干草。编程求解站着的水牛、躺着的水牛以及老水牛各有多少头（已知每种牛都存在）",
+                "Input-Format": "无",
+                "Output-Format": "若干行，每行 3 个数，为一组可能解，依次为站着的水牛数、躺着的水牛数、老水牛数",
+                "Path-to-C": "compulsive/Experiment7-2.c",
+                "Path-to-EXE": "compulsive/Experiment7-2.exe",
+                "Inputs": [
+                    ""
+                ]
+            }            
+        ],
+        "optional": [
+            {
+                "Name": "Optional-Experiment7-1",
+                "Problem": "编程计算 1000 的阶乘（1000!）有多少位。",
+                "Input-Format": "无",
+                "Output-Format": "一行，一个整数，为 1000! 的位数",
+                "Path-to-C": "optional/Optional-Experiment7-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment7-1.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment7-2",
+                "Problem": "已知食品店罐头堆成 n 层，每层排成一个长方形，底层长和宽两边分别为 a 和 b 个罐头，以后每上一层，长和宽两边的罐头各少一个，编程计算当输入 a=1800, b=760, n=10 时罐头的总数。",
+                "Input-Format": "无",
+                "Output-Format": "一行，一个整数，总罐头数",
+                "Path-to-C": "optional/Optional-Experiment7-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment7-2.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment7-3",
+                "Problem": "有⼀个六位数 abcdef，由六个不同的数字构成。它的两倍、三倍均为六位数，且这两个六位数都是 a, b, c, d, e, f 这六个数字的某个排列。编程求所有满⾜条件的六位数。",
+                "Input-Format": "无",
+                "Output-Format": "若干行，每行为一个符合要求的六位数",
+                "Path-to-C": "optional/Optional-Experiment7-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment7-3.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment7-4",
+                "Problem": "地图上有 A, B, C, D, E 五个国家，如图2 所示。现在要对这五个国家着⾊，要求是相邻的国家必须着不同的颜⾊。请问⾄少需要⼏种颜⾊才能满⾜题⽬要求？并给出⼀种着⾊⽅案，表明每个国家的颜⾊，颜⾊⽤ 1，2，3, … 表示。",
+                "Input-Format": "无",
+                "Output-Format": "共两行：\n第一行：一个整数，最小颜色数量；\n第二行：5 个整数，为一种可能的着色方案，分别为 A、B、C、D、E 的颜色",
+                "Path-to-C": "optional/Optional-Experiment7-4.c",
+                "Path-to-EXE": "optional/Optional-Experiment7-4.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Optional-Experiment7-5",
+                "Problem": "⼀个三阶⽅阵是由 1 ⾄ 9 的九个数字构成，要求⾏、列、及对⻆线之和均为 15，编程找出所有满⾜条件的⽅阵的数字组合。",
+                "Input-Format": "无",
+                "Output-Format": "共若干行：\n第一行：一个整数 n，为满足条件的方阵数量；\n接下来每四行为一个满足条件的方阵：其中前三行每行 3 个整数，最后一行为空行，作分隔用",
+                "Path-to-C": "optional/Optional-Experiment7-5.c",
+                "Path-to-EXE": "optional/Optional-Experiment7-5.exe",
+                "Inputs": [
+                    ""
+                ]
+            }
+        ]
+    }
+}
