@@ -3,6 +3,8 @@
 #include "./include/bool.h"
 #include <stdio.h>
 
+extern void judge(Player *player1, Player *player2, Player *player3);
+
 int main() {
     bool x;
     Player *player1 = newPlayer("player1", 1);
