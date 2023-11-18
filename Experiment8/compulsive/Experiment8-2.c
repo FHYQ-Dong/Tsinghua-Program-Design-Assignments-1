@@ -44,7 +44,6 @@ void solve_loop() {
     memset(ans, 0, sizeof(ans));
     ans[1] = 1; ans[2] = 2; ans[3] = 4;
     timer_init();
-    
     QueryPerformanceCounter(&time_start);	//计时开始
     printf("Answer_loop: %d\n", GoDown_loop(n));
     QueryPerformanceCounter(&time_over);	//计时结束

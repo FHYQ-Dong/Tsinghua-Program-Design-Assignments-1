@@ -50,9 +50,9 @@
         "optional": [
             {
                 "Name": "Optional-Experiment8-1",
-                "Problem": "编程计算 1000 的阶乘（1000!）有多少位。",
+                "Problem": "有一群鸡和一群兔，两种动物只数相同。两种动物的脚的总数都是三位数，且这两个三位数的六个数字分别是 0，1，2，3，4，5。编程求鸡和兔的只数是多少？ 它们的脚数各是多少？",
                 "Input-Format": "无",
-                "Output-Format": "一行，一个整数，为 1000! 的位数",
+                "Output-Format": "若干行，每行为一个可能解，依次输出鸡的数目、鸡的脚数、兔的数目、兔的脚数",
                 "Path-to-C": "optional/Optional-Experiment8-1.c",
                 "Path-to-EXE": "optional/Optional-Experiment8-1.exe",
                 "Inputs": [
@@ -61,44 +61,11 @@
             },
             {
                 "Name": "Optional-Experiment8-2",
-                "Problem": "已知食品店罐头堆成 n 层，每层排成一个长方形，底层长和宽两边分别为 a 和 b 个罐头，以后每上一层，长和宽两边的罐头各少一个，编程计算当输入 a=1800, b=760, n=10 时罐头的总数。",
+                "Problem": "编程计算 n=50 时 S 与 NS 的值，并比较大小：如果 S>NS，输出 1；S=NS，输出 0；S<NS，输出 -1。",
                 "Input-Format": "无",
                 "Output-Format": "一行，一个整数，总罐头数",
                 "Path-to-C": "optional/Optional-Experiment8-2.c",
                 "Path-to-EXE": "optional/Optional-Experiment8-2.exe",
-                "Inputs": [
-                    ""
-                ]
-            },
-            {
-                "Name": "Optional-Experiment8-3",
-                "Problem": "有⼀个六位数 abcdef，由六个不同的数字构成。它的两倍、三倍均为六位数，且这两个六位数都是 a, b, c, d, e, f 这六个数字的某个排列。编程求所有满⾜条件的六位数。",
-                "Input-Format": "无",
-                "Output-Format": "若干行，每行为一个符合要求的六位数",
-                "Path-to-C": "optional/Optional-Experiment8-3.c",
-                "Path-to-EXE": "optional/Optional-Experiment8-3.exe",
-                "Inputs": [
-                    ""
-                ]
-            },
-            {
-                "Name": "Optional-Experiment8-4",
-                "Problem": "地图上有 A, B, C, D, E 五个国家，如图2所示。现在要对这五个国家着⾊，要求是相邻的国家必须着不同的颜⾊。请问⾄少需要⼏种颜⾊才能满⾜题⽬要求？并给出⼀种着⾊⽅案，表明每个国家的颜⾊，颜⾊⽤ 1，2，3, … 表示。",
-                "Input-Format": "无",
-                "Output-Format": "共两行：\n第一行：一个整数，最小颜色数量；\n第二行：5 个整数，为一种可能的着色方案，分别为 A、B、C、D、E 的颜色",
-                "Path-to-C": "optional/Optional-Experiment8-4.c",
-                "Path-to-EXE": "optional/Optional-Experiment8-4.exe",
-                "Inputs": [
-                    ""
-                ]
-            },
-            {
-                "Name": "Optional-Experiment8-5",
-                "Problem": "⼀个三阶⽅阵是由 1 ⾄ 9 的九个数字构成，要求⾏、列、及对⻆线之和均为 15，编程找出所有满⾜条件的⽅阵的数字组合。",
-                "Input-Format": "无",
-                "Output-Format": "共若干行：\n第一行：一个整数 n，为满足条件的方阵数量；\n接下来每四行为一个满足条件的方阵：其中前三行每行 3 个整数，最后一行为空行，作分隔用",
-                "Path-to-C": "optional/Optional-Experiment8-5.c",
-                "Path-to-EXE": "optional/Optional-Experiment8-5.exe",
                 "Inputs": [
                     ""
                 ]

@@ -83,7 +83,6 @@ int main() {
     run_time=1000*(time_over.QuadPart-time_start.QuadPart)/dqFreq;
     printf("Time_loop: %lfms\n", run_time);
 
-
     people->init(people, cnt);
     QueryPerformanceCounter(&time_start);	//计时开始
     get_ans_recurrence(people, cnt, &ans);
