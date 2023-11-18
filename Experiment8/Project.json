@@ -63,7 +63,7 @@
                 "Name": "Optional-Experiment8-2",
                 "Problem": "编程计算 n=50 时 S 与 NS 的值，并比较大小：如果 S>NS，输出 1；S=NS，输出 0；S<NS，输出 -1。",
                 "Input-Format": "无",
-                "Output-Format": "一行，一个整数，总罐头数",
+                "Output-Format": "一行，一个整数，为 -1，0 或 1",
                 "Path-to-C": "optional/Optional-Experiment8-2.c",
                 "Path-to-EXE": "optional/Optional-Experiment8-2.exe",
                 "Inputs": [

@@ -128,7 +128,7 @@ int main() {
 Answer_loop: 27
 Time_loop: 0.001500ms
 Answer_recurrence: 27
-Time_recurrence: 0.000800ms
+Time_recurrence: 0.000900ms
 ```
 
 ### Experiment8-2
@@ -216,9 +216,9 @@ int main() {
 输出1：
 ```txt
 Answer_recurrence: 13
-Time_recurrence: 0.004100ms
+Time_recurrence: 0.004000ms
 Answer_loop: 13
-Time_loop: 0.000200ms
+Time_loop: 0.000300ms
 ```
 输入2：
 ```txt
@@ -229,7 +229,7 @@ Time_loop: 0.000200ms
 Answer_recurrence: 24
 Time_recurrence: 0.003900ms
 Answer_loop: 24
-Time_loop: 0.000200ms
+Time_loop: 0.000300ms
 ```
 输入3：
 ```txt
@@ -238,7 +238,7 @@ Time_loop: 0.000200ms
 输出3：
 ```txt
 Answer_recurrence: 44
-Time_recurrence: 0.003600ms
+Time_recurrence: 0.004500ms
 Answer_loop: 44
 Time_loop: 0.000200ms
 ```
@@ -249,7 +249,7 @@ Time_loop: 0.000200ms
 输出4：
 ```txt
 Answer_recurrence: 81
-Time_recurrence: 0.003300ms
+Time_recurrence: 0.004000ms
 Answer_loop: 81
 Time_loop: 0.000200ms
 ```
@@ -260,7 +260,7 @@ Time_loop: 0.000200ms
 输出5：
 ```txt
 Answer_recurrence: 149
-Time_recurrence: 0.003600ms
+Time_recurrence: 0.004000ms
 Answer_loop: 149
 Time_loop: 0.000200ms
 ```
@@ -271,9 +271,9 @@ Time_loop: 0.000200ms
 输出6：
 ```txt
 Answer_recurrence: 274
-Time_recurrence: 0.004200ms
+Time_recurrence: 0.003500ms
 Answer_loop: 274
-Time_loop: 0.000300ms
+Time_loop: 0.000200ms
 ```
 输入7：
 ```txt
@@ -282,7 +282,7 @@ Time_loop: 0.000300ms
 输出7：
 ```txt
 Answer_recurrence: 504
-Time_recurrence: 0.005900ms
+Time_recurrence: 0.003800ms
 Answer_loop: 504
 Time_loop: 0.000200ms
 ```
@@ -293,9 +293,9 @@ Time_loop: 0.000200ms
 输出8：
 ```txt
 Answer_recurrence: 927
-Time_recurrence: 0.003900ms
+Time_recurrence: 0.004000ms
 Answer_loop: 927
-Time_loop: 0.000200ms
+Time_loop: 0.000300ms
 ```
 输入9：
 ```txt
@@ -304,9 +304,9 @@ Time_loop: 0.000200ms
 输出9：
 ```txt
 Answer_recurrence: 1705
-Time_recurrence: 0.003600ms
+Time_recurrence: 0.003800ms
 Answer_loop: 1705
-Time_loop: 0.000200ms
+Time_loop: 0.000300ms
 ```
 输入10：
 ```txt
@@ -315,9 +315,9 @@ Time_loop: 0.000200ms
 输出10：
 ```txt
 Answer_recurrence: 3136
-Time_recurrence: 0.003200ms
+Time_recurrence: 0.004100ms
 Answer_loop: 3136
-Time_loop: 0.000200ms
+Time_loop: 0.000400ms
 ```
 输入11：
 ```txt
@@ -326,7 +326,7 @@ Time_loop: 0.000200ms
 输出11：
 ```txt
 Answer_recurrence: 5768
-Time_recurrence: 0.003400ms
+Time_recurrence: 0.003600ms
 Answer_loop: 5768
 Time_loop: 0.000300ms
 ```
@@ -348,7 +348,7 @@ Time_loop: 0.000200ms
 输出13：
 ```txt
 Answer_recurrence: 19513
-Time_recurrence: 0.003400ms
+Time_recurrence: 0.003500ms
 Answer_loop: 19513
 Time_loop: 0.000300ms
 ```
@@ -359,7 +359,7 @@ Time_loop: 0.000300ms
 输出14：
 ```txt
 Answer_recurrence: 35890
-Time_recurrence: 0.003700ms
+Time_recurrence: 0.003400ms
 Answer_loop: 35890
 Time_loop: 0.000300ms
 ```
@@ -370,9 +370,9 @@ Time_loop: 0.000300ms
 输出15：
 ```txt
 Answer_recurrence: 66012
-Time_recurrence: 0.003500ms
+Time_recurrence: 0.003700ms
 Answer_loop: 66012
-Time_loop: 0.000200ms
+Time_loop: 0.000400ms
 ```
 输入16：
 ```txt
@@ -381,7 +381,7 @@ Time_loop: 0.000200ms
 输出16：
 ```txt
 Answer_recurrence: 121415
-Time_recurrence: 0.003400ms
+Time_recurrence: 0.003300ms
 Answer_loop: 121415
 Time_loop: 0.000300ms
 ```
@@ -403,7 +403,7 @@ Time_loop: 0.000300ms
 输出18：
 ```txt
 Answer_recurrence: 1132436852
-Time_recurrence: 0.003500ms
+Time_recurrence: 0.003900ms
 Answer_loop: 1132436852
 Time_loop: 0.000300ms
 ```
@@ -487,7 +487,7 @@ Chick: 76, Chick_feet: 152, Rabbit: 76, Rabbit_feet: 304
 ```
 输出格式：
 ```txt
-一行，一个整数，总罐头数
+一行，一个整数，为 -1，0 或 1
 ```
 代码：
 ```c
