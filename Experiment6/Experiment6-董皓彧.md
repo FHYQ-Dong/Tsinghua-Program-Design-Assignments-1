@@ -336,6 +336,54 @@ Input Error
 998244=7+998237
 ```
 
+输入6：
+
+```txt
+165432
+```
+
+输出6：
+
+```txt
+165432=41+165391
+```
+
+输入7：
+
+```txt
+8465134
+```
+
+输出7：
+
+```txt
+8465134=3+8465131
+```
+
+输入8：
+
+```txt
+5646872
+```
+
+输出8：
+
+```txt
+5646872=3+5646869
+```
+
+输入9：
+
+```txt
+8674532
+```
+
+输出9：
+
+```txt
+8674532=43+8674489
+```
+
 ## 选做题
 
 ### Optional-Experiment6-1
@@ -362,14 +410,26 @@ Input Error
 
 ```c
 #include<stdio.h>
+
+int get_all_apples(int cur_child) { // 递归地求分给第 i 个孩子之前还剩下多少苹果
+    if (cur_child == 5) return 11;
+    else return (1 + (cur_child + 1) * get_all_apples(cur_child + 1)) / cur_child; // 通过手算得到递归式
+}
+
+void split_apples(int cur_apples) { // 分苹果
+    for (int i=1; i<=4; ++i) {
+        int nth_child_apples = (cur_apples + 1) / (i+1); // 第 i 个孩子分到的苹果数
+        printf("The %dth child gets %d apples.\n", i, nth_child_apples);
+        cur_apples -= nth_child_apples;
+    }
+    printf("The last child gets %d apples.\n", cur_apples); // 最后一个孩子分到的苹果数需要单独处理
+    return;
+}
+
 int main() {
-    // 计算得知
-    printf("总苹果数: 59\n");
-    printf("第一个人分得苹果数: 30\n");
-    printf("第二个人分得苹果数: 10\n");
-    printf("第三个人分得苹果数: 5\n");
-    printf("第四个人分得苹果数: 3\n");
-    printf("第五个人分得苹果数: 11\n");
+    int all_apples = get_all_apples(1);
+    printf("The total number of apples is %d.\n", all_apples);
+    split_apples(all_apples);
     return 0;
 }
 ```
@@ -383,12 +443,12 @@ int main() {
 输出1：
 
 ```txt
-总苹果数: 59
-第一个人分得苹果数: 30
-第二个人分得苹果数: 10
-第三个人分得苹果数: 5
-第四个人分得苹果数: 3
-第五个人分得苹果数: 11
+The total number of apples is 59.
+The 1th child gets 30 apples.
+The 2th child gets 10 apples.
+The 3th child gets 5 apples.
+The 4th child gets 3 apples.
+The last child gets 11 apples.
 ```
 
 ### Optional-Experiment6-2
@@ -554,7 +614,7 @@ S(10) = 4037913
 题目：
 
 ```txt
-找出1–1000中仅包含5个因子（包括1和自身）的所有自然数，输出这些自然数的所有因子
+
 ```
 
 输入格式：
