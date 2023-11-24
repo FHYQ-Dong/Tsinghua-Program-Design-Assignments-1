@@ -10,7 +10,7 @@
             {
                 "Name": "Experiment9-1",
                 "Problem": "设有若干只羊（>100 只），需要从中挑选最肥的 100 只供使用。如何选拔这 100 只最肥的羊，请同学帮忙使用至少 2 种不同算法编程。提示：羊的重量可以采用随机函数 rand() 来产生。另外：使用断点调试，截获保存 “最大 100 只羊” 数组的调试窗口图，并在作业报告中提交。",
-                "Input-Format": "两行，第一行为羊的总数，第二行为每只羊的重量，用空格隔开",
+                "Input-Format": "共 2 行，第一行为羊的总数，第二行为每只羊的重量，用空格隔开",
                 "Output-Format": "分 Answer1 和 Answer2 两部分，具体见输出",
                 "Path-to-C": "compulsive/Experiment9-1.c",
                 "Path-to-EXE": "compulsive/Experiment9-1.exe",
@@ -28,7 +28,18 @@
                 "Inputs": [
                     "3 \n1 2 3 1 \n3 4 5 2 \n3 4 6 3"
                 ]
-            }            
+            },
+            {
+                "Name": "Experiment9-3",
+                "Problem": "小朋友解鸡兔同笼",
+                "Input-Format": "共 1 行：两个正整数 m 和 n，分别表示鸡和兔的总数、脚的总数",
+                "Output-Format": "共 1 行：兔子的数目、鸡的数目",
+                "Path-to-C": "compulsive/Experiment9-3.c",
+                "Path-to-EXE": "compulsive/Experiment9-3.exe",
+                "Inputs": [
+                    "20 60"
+                ]
+            }              
         ],
         "optional": [
             {
