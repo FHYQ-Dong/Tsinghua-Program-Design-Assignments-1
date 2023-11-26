@@ -5,6 +5,7 @@
 #define INF_ANS 1
 #define NO_ANS -1
 #define SINGLE_ANS 0
+typedef int ANS_TYPE;
 
 
 void swap_line(double** a, double** b) { double* tmp = *a; *a = *b; *b = tmp; return; }
@@ -39,7 +40,7 @@ void eliminate_line(double* target_line, double* pivot_line, int times, int maxp
     return;
 }
 
-int get_ans(double** mat, double** b, int mat_size, double* ans) {
+ANS_TYPE get_ans(double** mat, double** b, int mat_size, double* ans) {
 
     // Infinite answers
     if (b[mat_size][1]==0 && mat[mat_size][mat_size]==0) return INF_ANS;
@@ -122,7 +123,7 @@ int main() {
     double* ans = (double*)malloc(sizeof(double) * (mat_size+1));
     memset(ans, 0, sizeof(double) * (mat_size+1));
 
-    int ans_type = get_ans(mat, b, mat_size, ans);
+    ANS_TYPE ans_type = get_ans(mat, b, mat_size, ans);
     if (ans_type == INF_ANS) printf("Infinite answers.\n");
     else if (ans_type == NO_ANS) printf("No answer.\n");
     else {

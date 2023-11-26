@@ -44,24 +44,42 @@
         "optional": [
             {
                 "Name": "Optional-Experiment9-1",
-                "Problem": "有一群鸡和一群兔，两种动物只数相同。两种动物的脚的总数都是三位数，且这两个三位数的六个数字分别是 0，1，2，3，4，5。编程求鸡和兔的只数是多少？ 它们的脚数各是多少？",
-                "Input-Format": "无",
-                "Output-Format": "若干行，每行为一个可能解，依次输出鸡的数目、鸡的脚数、兔的数目、兔的脚数",
+                "Problem": "满足如下条件的正整数称为“幸福数”：计算正整数各位数字的平方和，如果计算结果不为 1，则对该结果进行类似的计算直到结果为 1。如果计算过程中出现循环并且不包含 1，则原来的正整数不是幸福数。\n要求：输入一个正整数，如果是幸福数则输出 1，否则输出 0",
+                "Input-Format": "一行，一个正整数",
+                "Output-Format": "一行，一个整数，为 0 或 1",
                 "Path-to-C": "optional/Optional-Experiment9-1.c",
                 "Path-to-EXE": "optional/Optional-Experiment9-1.exe",
+                "Inputs": [
+                    "13",
+                    "12313",
+                    "9534032",
+                    "2342",
+                    "1"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment9-2",
+                "Problem": "执行下列程序的输出结果是________。",
+                "Input-Format": "无",
+                "Output-Format": "输出结果",
+                "Path-to-C": "optional/Optional-Experiment9-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment9-2.exe",
                 "Inputs": [
                     ""
                 ]
             },
             {
-                "Name": "Optional-Experiment9-2",
-                "Problem": "编程计算 n=50 时 S 与 NS 的值，并比较大小：如果 S>NS，输出 1；S=NS，输出 0；S<NS，输出 -1。",
-                "Input-Format": "无",
-                "Output-Format": "一行，一个整数，为 -1，0 或 1",
-                "Path-to-C": "optional/Optional-Experiment9-2.c",
-                "Path-to-EXE": "optional/Optional-Experiment9-2.exe",
+                "Name": "Optional-Experiment9-3",
+                "Problem": "编写程序，输入一个 18 位的身份证号，输出该身份证号是否合法。如果非法，输出正确的校验位",
+                "Input-Format": "一行，一个 18 位的身份证号",
+                "Output-Format": "共 1 或 2 行：\n若合法，输出 1 行：Right\n若非法，输出 2 行：\n    第 1 行：Wrong\n    第 2 行：正确的校验位",
+                "Path-to-C": "optional/Optional-Experiment9-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment9-3.exe",
                 "Inputs": [
-                    ""
+                    "111111111111111111",
+                    "110108200001019999",
+                    "110108200001019992",
+                    "330326199211027412"
                 ]
             }
         ]
