@@ -444,10 +444,7 @@ int main() {
 
         // select pivot
         int pivot_line = select_pivot(mat, b, mat_size, column_i); 
-        if (pivot_line == NO_PIVOT) { // infinite answers
-            printf("Infinite answers.\n");
-            goto FREE;
-        }
+        if (pivot_line == NO_PIVOT) continue; // no pivot in this column
 
         // normalize pivot line
         double pivot = mat[pivot_line][column_i];

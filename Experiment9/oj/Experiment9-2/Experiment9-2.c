@@ -58,22 +58,25 @@ ANS_TYPE get_ans(double** mat, double** b, int mat_size, double* ans) {
     return SINGLE_ANS;
 }
 
-void print_mat_a(double** mat, int mat_size) {
-    printf("Mat A = \n");
-    for (int i=1; i<=mat_size; ++i) {
-        for (int j=1; j<=mat_size; ++j) printf("\t%.6lf", mat[i][j]);
-        printf("\n");
-    }
-    return;
-}
-void print_mat_b(double** b, int mat_size) {
-    printf("Mat B = \n");
-    for (int i=1; i<=mat_size; ++i) printf("\t%.6lf", b[i][1]);
-    printf("\n");
-    return;
-}
+// void print_mat_a(double** mat, int mat_size) {
+//     for (int i=1; i<=mat_size; ++i) {
+//         for (int j=1; j<=mat_size; ++j) printf("%.6lf ", mat[i][j]);
+//         printf("\n");
+//     }
+//     return;
+// }
+// void print_mat_b(double** b, int mat_size) {
+//     for (int i=1; i<=mat_size; ++i) printf("%.6lf ", b[i][1]);
+//     printf("\n");
+//     return;
+// }
 
 int main() {
+
+    // char in_path[] = "10.in", out_path[] = "10.out";
+    // for (int i=1; i<=9; ++i) {
+        // in_path[0] = i + '0', out_path[0] = i + '0';
+        // FILE *fin = fopen(in_path, "r"), *fout = fopen(out_path, "w");
 
     // init
     int mat_size;
@@ -92,8 +95,14 @@ int main() {
     }
 
     // print MAT_A and MAT_B
-    print_mat_a(mat, mat_size);
-    print_mat_b(b, mat_size);
+    for (int i=1; i<=mat_size; ++i) {
+        for (int j=1; j<=mat_size; ++j) printf("%.6lf ", mat[i][j]);
+        printf("\n");
+    }
+    for (int i=1; i<=mat_size; ++i) printf("%.6lf ", b[i][1]);
+    printf("\n");
+    // print_mat_a(mat, mat_size);
+    // print_mat_b(b, mat_size);
 
 
     // Gauss Elimination
@@ -124,14 +133,13 @@ int main() {
     if (ans_type == INF_ANS) printf("Infinite answers.\n");
     else if (ans_type == NO_ANS) printf("No answer.\n");
     else {
-        printf("Answer:\n");
-        for (int i=1; i<=mat_size; ++i) printf("x(%d) = %.6lf\n", i, ans[i]);
-        printf("\n");
+        for (int i=1; i<=mat_size; ++i) printf("%.6lf\n", ans[i]);
     }
 
     // free
     FREE:
     for (int i=0; i<=mat_size; ++i) free(mat[i]), free(b[i]);
     free(mat), free(b), free(ans);
+    // }
     return 0;
 }
