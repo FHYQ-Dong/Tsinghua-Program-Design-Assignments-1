@@ -1,0 +1,89 @@
+{
+    "Name": "Experiment11-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment11",
+    "Environment": [
+        "gcc.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+        "Visual Stdio Code 1.84.2"
+    ],
+    "Experiments": {
+        "compulsive": [
+            {
+                "Name": "Experiment11-1",
+                "Problem": "给定两个字符串 sA 和 sB：长字符串 sA ⻓长度不超过 30，可能由字母/数字/符号等任意字符构成，但不含空格、换行符；模式字符串 sB 长度不超过 sA 的长度，可能包含除空格和换行符外的任意字符。现要求在长字符串 sA 中查找匹配模式字符串 sB，请你找到 sB 在 sA 中出现的所有位置。注意：模式字符串 sB 中含有一个或若干个特殊字符 ’?’ ，在匹配过程中，每个 ’?’ 可以匹配 sA 中的任意一个字符，而 sB 中的其他非 ’?’ 字符必须与 sA 中匹配的子串完全相同。要求：输入两行，第一行为长字符串 sA，第二行为模式字符串 sB；输出：sB 在 sA 中出现的所有位置（用若干非负整数表示），sA 的起始位置从 0 开始计算；如果没有找到任何匹配，输出 No match found。",
+                "Input-Format": "共 2 行，分别为 sA 与 sB",
+                "Output-Format": "共 1 行，No match found 或若干非负整数，表示 sB 在 sA 中出现的所有位置",
+                "Path-to-C": "compulsive/Experiment11-1.c",
+                "Path-to-EXE": "compulsive/Experiment11-1.exe",
+                "Inputs": [
+                    "abcdefghc*exyzcferpk\nc?e",
+                    "wioeu4r2i;4ehn;hqi342ih\n?i",
+                    "OEUYUR#H*(Wrwdjksv\n#??*",
+                    "111111111111111\n11?1?1",
+                    "3quroi3\n3?"
+                ]
+            },
+            {
+                "Name": "Experiment11-2",
+                "Problem": "对于一个由 a-z（小写）组成的字符串，将其中的元音反转，而辅音不反转。如对于字符串 \"hello\" ，替换后的字符串为 \"holle\"。（注：元音为 a, e, i, o, u）",
+                "Input-Format": "共 1 行，一个字符串",
+                "Output-Format": "共 1 行，一个翻转元音后的字符串",
+                "Path-to-C": "compulsive/Experiment11-2.c",
+                "Path-to-EXE": "compulsive/Experiment11-2.exe",
+                "Inputs": [
+                    "aeiou",
+                    "ewoyurekadhkwrjscvwew",
+                    "oqekfhvjfsvnsa",
+                    "aaaaaaaaaaaaaaa",
+                    "andsjklvhseruiohwfvnbjf"
+                ]
+            },
+            {
+                "Name": "Experiment11-3",
+                "Problem": "输入一段由英文字母（区分大小写）组成的字符串，将其按 ASCII 码从大到小的顺序输出。",
+                "Input-Format": "共 1 行：一个字符串，区分大小写",
+                "Output-Format": "共 1 行，一个排序后的字符串",
+                "Path-to-C": "compulsive/Experiment11-3.c",
+                "Path-to-EXE": "compulsive/Experiment11-3.exe",
+                "Inputs": [
+                    "ljkAdsdlkvjASABVJK",
+                    "AAAAAAAAAaaaaaaaaa",
+                    "AKJDncDKsdkjvHfADgCKDJSA",
+                    "ewidsuvkjnraiu",
+                    "KADCHBNJDSVKJDSV"
+                ]
+            }              
+        ],
+        "optional": [
+            {
+                "Name": "Optional-Experiment11-1",
+                "Problem": "从键盘输入两个字符串，判断它们是否属于异位字符串。所谓异位字符串，就是把一个字符串中字母的顺序改变，得到的字符串。为了简化，假设字符串只包含小写英文字母。",
+                "Input-Format": "共 2 行，两个字符串",
+                "Output-Format": "1 或 0，表示是否是异位字符串",
+                "Path-to-C": "optional/Optional-Experiment11-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment11-1.exe",
+                "Inputs": [
+                    "hello\nolleh",
+                    "wo3efohwe\nwefo3hwoe",
+                    "111111111111\n11111112",
+                    "wkeiljflwi4fj\nwkeiljflwi4fj",
+                    "1\n0"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment11-2",
+                "Problem": "在网络编程时，经常需要把 IP 地址转换为计算机内部的整型数来处理。C++系统提供的 atoi() 就是实现该功能。参考该函数，编写另一个函数（如aton() ），其功能是将输⼊入的 IPv4 地址（字符串，例如 166.111.64.89 ）字符串转换为 32 位整数输出。",
+                "Input-Format": "共 1 行，一个 IPv4 地址",
+                "Output-Format": "共 1 行，一个 32 位整数",
+                "Path-to-C": "optional/Optional-Experiment11-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment11-2.exe",
+                "Inputs": [
+                    "192.168.1.1",
+                    "1.1.1.1",
+                    "127.0.0.1",
+                    "10.0.0.1",
+                    "172.18.0.1"
+                ]
+            }
+        ]
+    }
+}
