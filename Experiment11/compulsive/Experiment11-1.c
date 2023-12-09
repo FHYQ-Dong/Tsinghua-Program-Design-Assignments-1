@@ -3,27 +3,23 @@ typedef char bool;
 #define true 1
 #define false 0
 
+void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }
+
 void qsort(int* begin, int *end, bool (*cmp)(int, int)) {
     if (begin >= end) return;
     int *l = begin, *r = end-1, *p = begin;
     while (l < r) {
         while (l < r && cmp(*p, *r)) --r;
         while (l < r && cmp(*l, *p)) ++l;
-        if (l < r) {
-            int t = *l;
-            *l = *r;
-            *r = t;
-        }
+        if (l < r) swap(l, r);
     }
-    int t = *l;
-    *l = *p;
-    *p = t;
+    swap(p, l);
     qsort(begin, l, cmp);
     qsort(l+1, end, cmp);
     return;
 }
 
-bool cmp(int a, int b) { return a < b; }
+bool cmp(int a, int b) { return a <= b; }
 
 void merge(int* source1, int* source2, int* dest) {
     int *p1 = source1, *p2 = source2, *p = dest;
