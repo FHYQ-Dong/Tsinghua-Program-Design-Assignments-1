@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <string.h>
-#define s(x) scanf("%d", &(x))
-#define p(x) printf("%d ", x)
+#define scan(x) scanf("%d", &(x))
+#define print(x) printf("%d ", x)
+#define endl putchar('\n')
 
-int del(int n, int *people[]) {
+int del(int n, int* people) {
     int cnt = 1, idx = 1;
-    while (people[idx] != -1) {
-        if (idx == 3) {
-            int idx_tmp = people[idx];
-            people[idx] = -1;
-            idx = idx_tmp;
+    while (people[idx] != idx) {
+        if (cnt == 2) {
+            people[idx] = people[people[idx]];
+            idx = people[idx];
+            cnt = 1;
         }
         else {
             ++cnt;
@@ -20,10 +21,10 @@ int del(int n, int *people[]) {
 }
 
 int main() {
-    int* people[51], n;
-    s(n);
-    for (int i=1; i<=n; ++i) people[i] = &people[i % n + 1];
+    int people[51], n;
+    scan(n);
+    for (int i=1; i<=n; ++i) people[i] = i % n + 1;
     int res = del(n, people);
-    p(res);
+    print(res);
     return 0;
 }
