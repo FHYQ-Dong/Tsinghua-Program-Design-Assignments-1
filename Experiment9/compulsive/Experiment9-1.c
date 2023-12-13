@@ -12,7 +12,6 @@ int max(int a, int b) {
     return a > b ? a : b;
 }
 
-
 void qsort_sheep(Sheep *beg, Sheep *end) { // big-endian
     if (beg >= end) return;
     Sheep *l = beg, *r = end - 1, *p = beg;
