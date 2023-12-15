@@ -61,7 +61,9 @@
                 "Output-Format": "输出结果，具体解析见代码注释",
                 "Path-to-C": "optional/Optional-Experiment11-1.c",
                 "Path-to-EXE": "optional/Optional-Experiment11-1.exe",
-                "Inputs": []
+                "Inputs": [
+                    ""
+                ]
             },
             {
                 "Name": "Optional-Experiment11-2",

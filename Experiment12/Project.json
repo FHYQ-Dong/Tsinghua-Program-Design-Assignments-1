@@ -9,73 +9,71 @@
         "compulsive": [
             {
                 "Name": "Experiment12-1",
-                "Problem": "编写程序，将两个长度各为 10 的整型数组数据按从小到大排序，然后将两组数据合并到一个长度为 20 的整型数组中，合并后的数组仍然按照从小到大排序。",
-                "Input-Format": "共 2 行，分别为两个数组",
-                "Output-Format": "共 1 行，为合并后的数组",
+                "Problem": "定义一个指向字符串的指针数组，用一个函数完成 N 个不等长字符串的输入，使得指针数组元素依次指向每一个输入的字符串。设计一个完成 N 个字符串按升序的排序函数（在排序过程中，要求只交换指向字符串的指针，不交换字符串）。在主函数中实现对排序后的字符串的输出。假设已知字符串的最大为 80 字节，根据实际输入的字符串长度来分配存储空间。",
+                "Input-Format": "共 N+1 行:\n\t第 1 行，一个整数 N，表示有 N 个字符串；\n\t第 2~N+1 行，每行一个字符串，字符串长度不超过 80 个字符",
+                "Output-Format": "共 N 行，按升序排列的字符串",
                 "Path-to-C": "compulsive/Experiment12-1.c",
                 "Path-to-EXE": "compulsive/Experiment12-1.exe",
                 "Inputs": [
-                    "1 12 3 14 5 16 7 18 9 20\n10 19 8 17 6 15 4 13 2 11",
-                    "1 3 5 7 9 11 13 15 17 19\n2 4 6 8 10 12 14 16 18 20",
-                    "1 1 1 1 1 1 1 1 1 1\n2 2 2 2 2 2 2 2 2 2",
-                    "1 2 3 4 5 6 7 8 9 10\n10 9 8 7 6 5 4 3 2 1",
-                    "1 2 3 4 5 6 7 8 9 10\n1 2 3 4 5 6 7 8 9 10"
+                    "5\n1234567890\nqwertyuiop\nasdfghjkl\nzxcvbnm\n9q3eofhwguiveulr",
+                    "3\n1234567890\nqwertyuiop\nasdfghjkl",
+                    "10\nySAjvCSD7So@m*^LM5iSk7!#6%&S5i*3\na6@79&r@Q#%pYU6VL%WG43dB4769@vUn\n@o4y7j8K%&@F39Pejze2m^\n7WgwPhgt3wR8C2fG7B3s!#7n2uv&$rd6Ncs4*&hY*NJ*nYtkWAym%A6d54HhrT8!\nHY47428BTT$CzpPyd8BW45%5!#!mZ%U#5P*E&5z!&5T%eFczd84g&tP4EGY^SbztmLJ&o^i5hcrT@\n7eJ5#38$5\n28934ywrheuiofb\nvnb39g584werufh9383hiAiajgkfh\n*(&$ITYEFOWHLUKdghe9p8rtyugj38aeioafhb\n103928ry9t4h3guriosdd",
+                    "2\nqwertyuiop\n1234567890",
+                    "1\n1234567890"
                 ]
             },
             {
                 "Name": "Experiment12-2",
-                "Problem": "有 n（n<50）个人围成一圈，顺序编号。从第 1 个人开始报数（1，2，3），报数为 3 者退出圈子。问最后留下来的人刚开始时排在几号？",
-                "Input-Format": "共 1 行，一个整数 n",
-                "Output-Format": "共 1 行，一个整数，表示最后留下来的人刚开始时排在几号",
+                "Problem": "编写程序，求一个 N×N 方阵的第 i 对角线的元素之和。给定方阵 a[10][10] = {0, 1, 2, ..., 99}",
+                "Input-Format": "无",
+                "Output-Format": "共 1 行，10 个数，分别为第 i 对角线的元素之和",
                 "Path-to-C": "compulsive/Experiment12-2.c",
                 "Path-to-EXE": "compulsive/Experiment12-2.exe",
                 "Inputs": [
-                    "10",
-                    "1",
-                    "50",
-                    "2",
-                    "29"
+                    ""
                 ]
             },
             {
                 "Name": "Experiment12-3",
-                "Problem": "编写程序，从键盘读入 10 个整数，将其存在一个长度为 10 的一维数组 a[] 中。然后输出该组数据从小到大的排序结果以及在原数组中的下标。（假设输入中无重复数据）",
-                "Input-Format": "共 1 行，10 个整数",
-                "Output-Format": "共 2 行：\n第 1 行，排序后的数组；\n第 2 行，在原数组中的下标。",
+                "Problem": "通常一个基于转义符的 emoji 表情输入由以下三部分构成：转义符 + 表情名称 + 终止符以新浪微博为例，当微博正文读取到一个转义符 “[” 时，它与终⽌止符 “]” 之间的文字将作为表情名称在表情库中进行搜索，如果存在匹配表情，则输出显示。\n注意，如果在一段语句中存在多个转义符和一个终止符，那么以离终止符最近的一个转义符作为表情的起始标志。",
+                "Input-Format": "共 3 行：\n\t第 1 行：起始标志字符\n\t第 2 行：终止标志字符\n\t第 3 行：待处理的字符串",
+                "Output-Format": "共若干行，每行一个表情名称文字，按照输入顺序输出",
                 "Path-to-C": "compulsive/Experiment12-3.c",
                 "Path-to-EXE": "compulsive/Experiment12-3.exe",
                 "Inputs": [
-                    "10 9 8 7 6 5 4 3 2 1",
-                    "1 10 2 9 3 8 4 7 5 6",
-                    "6 7 8 9 10 5 4 3 2 1",
-                    "1 2 3 4 5 6 7 8 9 10",
-                    "6 3 7 8 2 5 10 1 9 4"
+                    "*\n#\nTime for lunch. *greedy# Hope a big meal.",
+                    "*\n#\n*happy*smile#",
+                    "[\n]\nEmmm... You use [Grin] instead of [Smile] when you are really happy in wechat.",
+                    "[\n]\n[a[b[c[d[e[f[g][][[[][f]",
+                    "a\nb\na[b[c[d[e[f[g[][[[][f]aa"
                 ]
             }              
         ],
         "optional": [
             {
                 "Name": "Optional-Experiment12-1",
-                "Problem": "下列程序的输出结果是？",
-                "Input-Format": "无",
-                "Output-Format": "输出结果，具体解析见代码注释",
+                "Problem": "在图像的基于 DCT 变换的压缩中，通常对 DCT 变换后的系数矩阵进行 Zig-Zag 扫描。所谓 Zig-Zag 扫描，又名 “之” 字型扫描，即从矩阵的第一行第一列系数开始，按照 “之” 字形方向进行系数读取。以示例 3 阶矩阵 {1, 2, 3, 4, 5, 6, 7, 8, 9} 为例，经过 Zig-Zag 扫描后，输出数据顺序为 1 2 4 7 5 3 6 8 9",
+                "Input-Format": "共 N+1 行：\n\t第 1 行，一个整数 N，表示矩阵的阶数；\n\t第 2~N+1 行，每行 N 个整数，表示矩阵的系数",
+                "Output-Format": "一行，Zig-Zag 扫描后的系数，以空格分隔",
                 "Path-to-C": "optional/Optional-Experiment12-1.c",
                 "Path-to-EXE": "optional/Optional-Experiment12-1.exe",
-                "Inputs": []
+                "Inputs": [
+                    "3\n1 2 3\n4 5 6\n7 8 9",
+                    "4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16",
+                    "2\n1 2\n3 4",
+                    "5\n25 24 23 22 21\n20 19 18 17 16\n15 14 13 12 11\n10 9 8 7 6\n5 4 3 2 1",
+                    "1\n1"
+                ]
             },
             {
                 "Name": "Optional-Experiment12-2",
-                "Problem": "验证卡布列克运算。任意一个四位数，只要它们各个位上的数字是不全相同的，就有这样的规律：\n1. 将组成这个四位数的 4 个数字由大到小排列，形成由这 4 个数字构成的最大的四位数；\n2. 将组成这个四位数的 4 个数字由小到大排列，形成由这 4 个数字构成的最小的四位数（如果4个数字中含有0，则得到的数不足四位）；\n3. 求两个数的差，得到一个新的四位数；\n4. 重复以上过程，最后得到的结果总是 6174。",
-                "Input-Format": "共 1 行，一个整数 N",
-                "Output-Format": "若 N 为各个位上数字不全相同的四位数，则输出验证卡布列克运算的公式；否则输出 \"error\"。",
+                "Problem": "假设将下列程序生成可执行文件 test.exe ，使用命令行运行 test FINAL EXAM ，则程序的输出结果是",
+                "Input-Format": "无",
+                "Output-Format": "输出结果，具体解析见代码注释",
                 "Path-to-C": "optional/Optional-Experiment12-2.c",
                 "Path-to-EXE": "optional/Optional-Experiment12-2.exe",
                 "Inputs": [
-                    "1234",
-                    "1234567",
-                    "9999",
-                    "9998",
-                    "1000"
+                    ""
                 ]
             }
         ]

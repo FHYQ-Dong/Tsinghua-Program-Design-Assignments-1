@@ -334,6 +334,15 @@ int main() {
     return 0;
 }
 ```
+输入1：
+```txt
+
+```
+输出1：
+```txt
+HhnewyearNEWYEAR
+YEAR
+```
 
 ### Optional-Experiment11-2
 题目：
