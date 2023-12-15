@@ -1,28 +1,41 @@
 # Experiment12-董皓彧
+
 环境：
+
 ```txt
 gcc.exe (x86_64-win32-seh-rev1, Built by MinGW-Builds project) 13.2.0
 Visual Stdio Code 1.84.2
 ```
+
 作业仓库地址：
 [https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment12](https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment12)
+
 ## 必做题
+
 ### Experiment12-1
+
 题目：
+
 ```txt
 定义一个指向字符串的指针数组，用一个函数完成 N 个不等长字符串的输入，使得指针数组元素依次指向每一个输入的字符串。设计一个完成 N 个字符串按升序的排序函数（在排序过程中，要求只交换指向字符串的指针，不交换字符串）。在主函数中实现对排序后的字符串的输出。假设已知字符串的最大为 80 字节，根据实际输入的字符串长度来分配存储空间。
 ```
+
 输入格式：
+
 ```txt
 共 N+1 行:
 	第 1 行，一个整数 N，表示有 N 个字符串；
 	第 2~N+1 行，每行一个字符串，字符串长度不超过 80 个字符
 ```
+
 输出格式：
+
 ```txt
 共 N 行，按升序排列的字符串
 ```
+
 代码：
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -84,13 +97,15 @@ int main() {
 
     qsortstr(c, c + N, cmp);
     for (int i = 0; i < N; i++) printf("%s\n", c[i]);
-    
+  
     for (int i = 0; i < N; i++) free(c[i]);
     free(c);
     return 0;
 }
 ```
+
 输入1：
+
 ```txt
 5
 1234567890
@@ -99,7 +114,9 @@ asdfghjkl
 zxcvbnm
 9q3eofhwguiveulr
 ```
+
 输出1：
+
 ```txt
 1234567890
 9q3eofhwguiveulr
@@ -107,20 +124,26 @@ asdfghjkl
 qwertyuiop
 zxcvbnm
 ```
+
 输入2：
+
 ```txt
 3
 1234567890
 qwertyuiop
 asdfghjkl
 ```
+
 输出2：
+
 ```txt
 1234567890
 asdfghjkl
 qwertyuiop
 ```
+
 输入3：
+
 ```txt
 10
 ySAjvCSD7So@m*^LM5iSk7!#6%&S5i*3
@@ -134,7 +157,9 @@ vnb39g584werufh9383hiAiajgkfh
 *(&$ITYEFOWHLUKdghe9p8rtyugj38aeioafhb
 103928ry9t4h3guriosdd
 ```
+
 输出3：
+
 ```txt
 *(&$ITYEFOWHLUKdghe9p8rtyugj38aeioafhb
 103928ry9t4h3guriosdd
@@ -147,41 +172,57 @@ a6@79&r@Q#%pYU6VL%WG43dB4769@vUn
 vnb39g584werufh9383hiAiajgkfh
 ySAjvCSD7So@m*^LM5iSk7!#6%&S5i*3
 ```
+
 输入4：
+
 ```txt
 2
 qwertyuiop
 1234567890
 ```
+
 输出4：
+
 ```txt
 1234567890
 qwertyuiop
 ```
+
 输入5：
+
 ```txt
 1
 1234567890
 ```
+
 输出5：
+
 ```txt
 1234567890
 ```
 
 ### Experiment12-2
+
 题目：
+
 ```txt
 编写程序，求一个 N×N 方阵的第 i 对角线的元素之和。给定方阵 a[10][10] = {0, 1, 2, ..., 99}
 ```
+
 输入格式：
+
 ```txt
 无
 ```
+
 输出格式：
+
 ```txt
 共 1 行，10 个数，分别为第 i 对角线的元素之和
 ```
+
 代码：
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -201,11 +242,15 @@ int main() {
     return 0;
 }
 ```
+
 输入1：
+
 ```txt
 
 ```
+
 输出1：
+
 ```txt
 495
 495
@@ -220,23 +265,31 @@ int main() {
 ```
 
 ### Experiment12-3
+
 题目：
+
 ```txt
 通常一个基于转义符的 emoji 表情输入由以下三部分构成：转义符 + 表情名称 + 终止符以新浪微博为例，当微博正文读取到一个转义符 “[” 时，它与终⽌止符 “]” 之间的文字将作为表情名称在表情库中进行搜索，如果存在匹配表情，则输出显示。
 注意，如果在一段语句中存在多个转义符和一个终止符，那么以离终止符最近的一个转义符作为表情的起始标志。
 ```
+
 输入格式：
+
 ```txt
 共 3 行：
 	第 1 行：起始标志字符
 	第 2 行：终止标志字符
 	第 3 行：待处理的字符串
 ```
+
 输出格式：
+
 ```txt
 共若干行，每行一个表情名称文字，按照输入顺序输出
 ```
+
 代码：
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -248,7 +301,7 @@ int main() {
     memset(s, 0, sizeof(s));
     scanf("%c\n%c\n", &beg, &end);
     fgets(s, 150, stdin); // get a line
-    
+  
     char* his = NULL;
     for (char* p = s; *p != '\0'; ++p) {
         if (*p == beg) his = p;
@@ -265,78 +318,107 @@ int main() {
     return 0;
 }
 ```
+
 输入1：
+
 ```txt
 *
 #
 Time for lunch. *greedy# Hope a big meal.
 ```
+
 输出1：
+
 ```txt
 greedy
 ```
+
 输入2：
+
 ```txt
 *
 #
 *happy*smile#
 ```
+
 输出2：
+
 ```txt
 smile
 ```
+
 输入3：
+
 ```txt
 [
 ]
 Emmm... You use [Grin] instead of [Smile] when you are really happy in wechat.
 ```
+
 输出3：
+
 ```txt
 Grin
 Smile
 ```
+
 输入4：
+
 ```txt
 [
 ]
 [a[b[c[d[e[f[g][][[[][f]
 ```
+
 输出4：
+
 ```txt
 g
 
 
 f
 ```
+
 输入5：
+
 ```txt
 a
 b
 a[b[c[d[e[f[g[][[[][f]aa
 ```
+
 输出5：
+
 ```txt
 [
 ```
 
 ## 选做题
+
 ### Optional-Experiment12-1
+
 题目：
+
 ```txt
 在图像的基于 DCT 变换的压缩中，通常对 DCT 变换后的系数矩阵进行 Zig-Zag 扫描。所谓 Zig-Zag 扫描，又名 “之” 字型扫描，即从矩阵的第一行第一列系数开始，按照 “之” 字形方向进行系数读取。以示例 3 阶矩阵 {1, 2, 3, 4, 5, 6, 7, 8, 9} 为例，经过 Zig-Zag 扫描后，输出数据顺序为 1 2 4 7 5 3 6 8 9
 ```
+
 输入格式：
+
 ```txt
 共 N+1 行：
 	第 1 行，一个整数 N，表示矩阵的阶数；
 	第 2~N+1 行，每行 N 个整数，表示矩阵的系数
 ```
+
 输出格式：
+
 ```txt
 一行，Zig-Zag 扫描后的系数，以空格分隔
 ```
+
 代码：
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -364,18 +446,24 @@ int main() {
     return 0;
 }
 ```
+
 输入1：
+
 ```txt
 3
 1 2 3
 4 5 6
 7 8 9
 ```
+
 输出1：
+
 ```txt
 1 2 4 7 5 3 6 8 9 
 ```
+
 输入2：
+
 ```txt
 4
 1 2 3 4
@@ -383,21 +471,29 @@ int main() {
 9 10 11 12
 13 14 15 16
 ```
+
 输出2：
+
 ```txt
 1 2 5 9 6 3 4 7 10 13 14 11 8 12 15 16 
 ```
+
 输入3：
+
 ```txt
 2
 1 2
 3 4
 ```
+
 输出3：
+
 ```txt
 1 2 3 4 
 ```
+
 输入4：
+
 ```txt
 5
 25 24 23 22 21
@@ -406,34 +502,48 @@ int main() {
 10 9 8 7 6
 5 4 3 2 1
 ```
+
 输出4：
+
 ```txt
 25 24 20 15 19 23 22 18 14 10 5 9 13 17 21 16 12 8 4 3 7 11 6 2 1 
 ```
+
 输入5：
+
 ```txt
 1
 1
 ```
+
 输出5：
+
 ```txt
 1 
 ```
 
 ### Optional-Experiment12-2
+
 题目：
+
 ```txt
 假设将下列程序生成可执行文件 test.exe ，使用命令行运行 test FINAL EXAM ，则程序的输出结果是
 ```
+
 输入格式：
+
 ```txt
 无
 ```
+
 输出格式：
+
 ```txt
 输出结果，具体解析见代码注释
 ```
+
 代码：
+
 ```c
 #include <stdio.h>
 int main(int argc, char* argv[]) {
@@ -453,12 +563,15 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
 输入1：
+
 ```txt
 
 ```
+
 输出1：
-```txt
-..\optional/Optional-Experiment12-2.exe
-```
 
+```txt
+ttest.exeFFINALEEXAM
+```
