@@ -56,6 +56,11 @@ class OjGenerator():
                 with open(os.path.join(self.directory, 'oj', Experiment['Name'], str(idx+1)+'.out'), 'w', encoding='utf-8') as f:
                     f.write(ExperimentResult['Output'][idx])
 
+    def compress(self):
+        for file, dirs, files in os.walk(os.path.join(self.directory, 'oj')):
+            for dir in dirs:
+                subprocess.check_output(['zip', '-r', dir+'.zip', '*'], cwd=os.path.join(self.directory, 'oj', dir))
+
 if __name__ == '__main__':
     if len(argv) == 1:
         myOjGenerator = OjGenerator('.')
@@ -65,3 +70,4 @@ if __name__ == '__main__':
         logger.error('Too many arguments.')
         exit(1)
     myOjGenerator.generate_test_points()
+    myOjGenerator.compress()
