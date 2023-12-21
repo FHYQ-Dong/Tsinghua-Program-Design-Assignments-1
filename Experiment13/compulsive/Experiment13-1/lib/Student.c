@@ -1,6 +1,4 @@
 #include "Student.h"
-#include "Date.h"
-#include "Sex.h"
 #include <stdio.h>
 
 bool cmp(const Student a, const Student b) { return a.score > b.score; }

@@ -1,5 +1,7 @@
 #pragma once
 #include "bool.h"
+#include "Date.h"
+#include "Sex.h"
 
 typedef struct {
     int id;

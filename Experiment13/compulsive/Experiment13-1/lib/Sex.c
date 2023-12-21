@@ -1,4 +1,5 @@
 #include "Sex.h"
+#include "string.h"
 
 char* stoa(SEX s) {
     if (s == male) return "male";

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Date.h"
-#include "Student.h"
-#include "bool.h"
+#include "./lib/bool.h"
+#include "./lib/Date.h"
+#include "./lib/Student.h"
 
 const int MAXN = 1;
 

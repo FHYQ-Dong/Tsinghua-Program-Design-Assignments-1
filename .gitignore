@@ -94,3 +94,6 @@ CMakeLists.txt.user
 !**/oj/**/*.in
 !**/oj/**/*.out
 !**/oj/**/*.zip
+
+# Release
+**/Release
