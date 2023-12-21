@@ -1,7 +1,8 @@
 #include "Student.h"
 #include <stdio.h>
 
-bool cmp(const Student a, const Student b) { return a.score > b.score; }
+bool cmp_score(const Student a, const Student b) { return a.score < b.score; }
+bool cmp_id(const Student a, const Student b) { return a.id < b.id; }
 
 double even_score(const Student* beg, const Student* end) {
     double sum = 0;
@@ -24,6 +25,19 @@ void sort_student(Student* beg, Student* end, bool (*cmp)(const Student, const S
     *l = mid;
     sort_student(beg, l, cmp);
     sort_student(l + 1, end, cmp);
+}
+
+Student* search_student(const Student* beg, const Student* end, int id) {
+    if (beg >= end) return NULL;
+    const Student *l = beg, *r = end - 1;
+    while (l < r) {
+        const Student* mid = l + (r - l) / 2;
+        if (mid->id == id) return (Student*)mid;
+        else if (mid->id < id) l = mid + 1;
+        else r = mid - 1;
+    }
+    if (l->id == id) return (Student*)l;
+    return NULL;
 }
 
 void print_student_info(const Student* beg, const Student* end) {

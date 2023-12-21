@@ -1,0 +1,6 @@
+add_library(Bool STATIC "bool.h" "bool.c")
+add_library(Date STATIC Date.h Date.c)
+add_library(Sex STATIC Sex.h Sex.c)
+add_library(Student STATIC Student.h Student.c)
+add_library(FileHandler STATIC FileHandler.h FileHandler.c)
+add_library(args STATIC args.h args.c)

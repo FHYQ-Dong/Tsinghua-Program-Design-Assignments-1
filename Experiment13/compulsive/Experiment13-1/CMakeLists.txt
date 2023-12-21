@@ -6,11 +6,11 @@ aux_source_directory(. DIR_SRCS)
 
 add_executable(${PROJECT_NAME} ${DIR_SRCS})
 
-add_subdirectory(lib)
-file(GLOB_RECURSE HEADERS lib/*.h)
-file(GLOB_RECURSE LIBS build/lib/*.lib)
+add_subdirectory(include)
+file(GLOB_RECURSE HEADERS include/*.h)
+file(GLOB_RECURSE LIBS build/include/*.a)
 
-target_link_libraries(${PROJECT_NAME} Bool Sex Date Student)
+target_link_libraries(${PROJECT_NAME} Bool Sex Date Student FileHandler args)
 
 set(CMAKE_INSTALL_PREFIX "../Release")
 install(TARGETS Experiment13-1 DESTINATION bin)
