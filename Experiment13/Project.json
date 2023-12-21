@@ -1,0 +1,81 @@
+{
+    "Name": "Experiment13-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment13",
+    "Environment": [
+        "gcc.exe (x86_64-win32-seh-rev1, Built by MinGW-Builds project) 13.2.0",
+        "Visual Stdio Code 1.84.2"
+    ],
+    "Experiments": {
+        "compulsive": [
+            {
+                "Name": "Experiment13-1",
+                "Problem": "定义一个指向字符串的指针数组，用一个函数完成 N 个不等长字符串的输入，使得指针数组元素依次指向每一个输入的字符串。设计一个完成 N 个字符串按升序的排序函数（在排序过程中，要求只交换指向字符串的指针，不交换字符串）。在主函数中实现对排序后的字符串的输出。假设已知字符串的最大为 80 字节，根据实际输入的字符串长度来分配存储空间。",
+                "Input-Format": "共 N+1 行:\n\t第 1 行，一个整数 N，表示有 N 个字符串；\n\t第 2~N+1 行，每行一个字符串，字符串长度不超过 80 个字符",
+                "Output-Format": "共 N 行，按升序排列的字符串",
+                "Path-to-C": "compulsive/Experiment13-1.c",
+                "Path-to-EXE": "compulsive/Experiment13-1.exe",
+                "Inputs": [
+                    "5\n1234567890\nqwertyuiop\nasdfghjkl\nzxcvbnm\n9q3eofhwguiveulr",
+                    "3\n1234567890\nqwertyuiop\nasdfghjkl",
+                    "10\nySAjvCSD7So@m*^LM5iSk7!#6%&S5i*3\na6@79&r@Q#%pYU6VL%WG43dB4769@vUn\n@o4y7j8K%&@F39Pejze2m^\n7WgwPhgt3wR8C2fG7B3s!#7n2uv&$rd6Ncs4*&hY*NJ*nYtkWAym%A6d54HhrT8!\nHY47428BTT$CzpPyd8BW45%5!#!mZ%U#5P*E&5z!&5T%eFczd84g&tP4EGY^SbztmLJ&o^i5hcrT@\n7eJ5#38$5\n28934ywrheuiofb\nvnb39g584werufh9383hiAiajgkfh\n*(&$ITYEFOWHLUKdghe9p8rtyugj38aeioafhb\n103928ry9t4h3guriosdd",
+                    "2\nqwertyuiop\n1234567890",
+                    "1\n1234567890"
+                ]
+            },
+            {
+                "Name": "Experiment13-2",
+                "Problem": "编写程序，求一个 N×N 方阵的第 i 对角线的元素之和。给定方阵 a[10][10] = {0, 1, 2, ..., 99}",
+                "Input-Format": "无",
+                "Output-Format": "共 1 行，10 个数，分别为第 i 对角线的元素之和",
+                "Path-to-C": "compulsive/Experiment13-2.c",
+                "Path-to-EXE": "compulsive/Experiment13-2.exe",
+                "Inputs": [
+                    ""
+                ]
+            },
+            {
+                "Name": "Experiment13-3",
+                "Problem": "通常一个基于转义符的 emoji 表情输入由以下三部分构成：转义符 + 表情名称 + 终止符以新浪微博为例，当微博正文读取到一个转义符 “[” 时，它与终⽌止符 “]” 之间的文字将作为表情名称在表情库中进行搜索，如果存在匹配表情，则输出显示。\n注意，如果在一段语句中存在多个转义符和一个终止符，那么以离终止符最近的一个转义符作为表情的起始标志。",
+                "Input-Format": "共 3 行：\n\t第 1 行：起始标志字符\n\t第 2 行：终止标志字符\n\t第 3 行：待处理的字符串",
+                "Output-Format": "共若干行，每行一个表情名称文字，按照输入顺序输出",
+                "Path-to-C": "compulsive/Experiment13-3.c",
+                "Path-to-EXE": "compulsive/Experiment13-3.exe",
+                "Inputs": [
+                    "*\n#\nTime for lunch. *greedy# Hope a big meal.",
+                    "*\n#\n*happy*smile#",
+                    "[\n]\nEmmm... You use [Grin] instead of [Smile] when you are really happy in wechat.",
+                    "[\n]\n[a[b[c[d[e[f[g][][[[][f]",
+                    "a\nb\na[b[c[d[e[f[g[][[[][f]aa"
+                ]
+            }              
+        ],
+        "optional": [
+            {
+                "Name": "Optional-Experiment13-1",
+                "Problem": "在图像的基于 DCT 变换的压缩中，通常对 DCT 变换后的系数矩阵进行 Zig-Zag 扫描。所谓 Zig-Zag 扫描，又名 “之” 字型扫描，即从矩阵的第一行第一列系数开始，按照 “之” 字形方向进行系数读取。以示例 3 阶矩阵 {1, 2, 3, 4, 5, 6, 7, 8, 9} 为例，经过 Zig-Zag 扫描后，输出数据顺序为 1 2 4 7 5 3 6 8 9",
+                "Input-Format": "共 N+1 行：\n\t第 1 行，一个整数 N，表示矩阵的阶数；\n\t第 2~N+1 行，每行 N 个整数，表示矩阵的系数",
+                "Output-Format": "一行，Zig-Zag 扫描后的系数，以空格分隔",
+                "Path-to-C": "optional/Optional-Experiment13-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment13-1.exe",
+                "Inputs": [
+                    "3\n1 2 3\n4 5 6\n7 8 9",
+                    "4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16",
+                    "2\n1 2\n3 4",
+                    "5\n25 24 23 22 21\n20 19 18 17 16\n15 14 13 12 11\n10 9 8 7 6\n5 4 3 2 1",
+                    "1\n1"
+                ]
+            },
+            {
+                "Name": "Optional-Experiment13-2",
+                "Problem": "假设将下列程序生成可执行文件 test.exe ，使用命令行运行 test FINAL EXAM ，则程序的输出结果是",
+                "Input-Format": "无",
+                "Output-Format": "输出结果，具体解析见代码注释",
+                "Path-to-C": "optional/Optional-Experiment13-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment13-2.exe",
+                "Inputs": [
+                    ""
+                ]
+            }
+        ]
+    }
+}
