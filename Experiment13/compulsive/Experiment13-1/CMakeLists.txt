@@ -4,4 +4,4 @@ project(Experiment13-1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Experiment13-1 main.cpp)
+add_executable(Experiment13-1 *.h *.c)
