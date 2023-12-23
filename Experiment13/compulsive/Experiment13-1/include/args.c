@@ -42,11 +42,11 @@ ARGS split_args(int argc, const char *argv[]) {
     else if (strcmp(argv[1], "--search") == 0) args.command = COMMAND_SEARCH;
     else if (strcmp(argv[1], "--even") == 0) args.command = COMMAND_EVEN;
     else if (strcmp(argv[1], "--all") == 0) args.command = COMMAND_ALL;
-    else print_mistake(ARG_NOT_FOUND, argv[1]);
+    else print_mistake(ARG_NOT_FOUND, (char*)argv[1]);
 
     if (args.command == COMMAND_HELP) return args;
     if (argc < 4) print_mistake(ARG_LESS, "[option]");
-    if (strcmp(argv[2], "-f") == 0) args.filename = argv[3];
+    if (strcmp(argv[2], "-f") == 0) args.filename = (char*)argv[3];
     else print_mistake(ARG_WRONG_FORMAT, "[option]");
 
     return args;

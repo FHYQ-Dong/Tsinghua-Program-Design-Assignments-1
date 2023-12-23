@@ -3,7 +3,7 @@
 
 char* stoa(SEX s) {
     if (s == male) return "male";
-    else if (s == female) "female";
+    else if (s == female) return "female";
     else return "NAM";
 }
 SEX atos(char c[7]) {

@@ -6,3 +6,4 @@ typedef struct Date {
 } Date;
 int dtoi(const Date date);
 Date itod(const int date);
+char* dtos(const Date date);
