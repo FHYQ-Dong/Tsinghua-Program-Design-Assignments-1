@@ -20,5 +20,5 @@ typedef struct {
 } ARGS;
 
 void print_usage();
-void print_mistake(arg_condition condition, char* arg);
+void print_error(arg_condition condition, char* arg);
 ARGS split_args(int argc, char const *argv[]);

@@ -4,6 +4,5 @@ typedef struct Date {
     int month;
     int day;
 } Date;
-int dtoi(const Date date);
-Date itod(const int date);
-char* dtos(const Date date);
+Date atod(const char* date);
+char* dtoa(const Date date);

@@ -8,12 +8,12 @@
 #include "./include/args.h"
 
 void read_student(Student* student) {
-    int id, birthday; double score; char name[100]; char sex[7];
-    scanf("%d", &id); scanf("%s", name); scanf("%s", sex); scanf("%d", &birthday); scanf("%lf", &score);
+    int id;; double score; char name[100], sex[7], birthday[11];
+    scanf("%d", &id); scanf("%s", name); scanf("%s", sex); scanf("%s", &birthday); scanf("%lf", &score);
     student->id = id;
     strcpy(student->name, name);
     student->sex = atos(sex);
-    student->birthday = itod(birthday);
+    student->birthday = atod(birthday);
     student->score = score;
 }
 

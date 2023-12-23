@@ -44,5 +44,5 @@ void print_student_info(const Student* beg, const Student* end) {
     printf("id\tname\tsex\tbirthday\tscore\n");
     printf("------------------------------------------------\n");
     for (const Student* p=beg; p<end; ++p) 
-        printf("%d\t%s\t%s\t%s\t%.2lf\n", p->id, p->name, stoa(p->sex), dtos(p->birthday), p->score);
+        printf("%d\t%s\t%s\t%s\t%.2lf\n", p->id, p->name, stoa(p->sex), dtoa(p->birthday), p->score);
 }

@@ -12,10 +12,10 @@ void print_usage() {
     printf("  --even\t\t\tLoad the data from file $filename and print the even score\n");
     printf("  --all\t\t\t\tLoad the data from file $filename and print all the data\n");
     printf("Options:\n");
-    printf("  -f $filename\t\t\tSpecify the filename\n");
+    printf("  -f filename\t\t\tSpecify the filename\n");
 }
 
-void print_mistake(arg_condition condition, char* arg) {
+void print_error(arg_condition condition, char* arg) {
     switch (condition) {
         case ARG_LESS:
             printf("Error: Argument %s is missing\n", arg);
@@ -34,7 +34,7 @@ void print_mistake(arg_condition condition, char* arg) {
 }
 
 ARGS split_args(int argc, const char *argv[]) {
-    if (argc < 2) print_mistake(ARG_LESS, "[command]");
+    if (argc < 2) print_error(ARG_LESS, "[command]");
 
     ARGS args = {0};
     if (strcmp(argv[1], "--help") == 0) args.command = COMMAND_HELP;
@@ -42,12 +42,12 @@ ARGS split_args(int argc, const char *argv[]) {
     else if (strcmp(argv[1], "--search") == 0) args.command = COMMAND_SEARCH;
     else if (strcmp(argv[1], "--even") == 0) args.command = COMMAND_EVEN;
     else if (strcmp(argv[1], "--all") == 0) args.command = COMMAND_ALL;
-    else print_mistake(ARG_NOT_FOUND, (char*)argv[1]);
+    else print_error(ARG_NOT_FOUND, (char*)argv[1]);
 
     if (args.command == COMMAND_HELP) return args;
-    if (argc < 4) print_mistake(ARG_LESS, "[option]");
+    if (argc < 4) print_error(ARG_LESS, "[option]");
     if (strcmp(argv[2], "-f") == 0) args.filename = (char*)argv[3];
-    else print_mistake(ARG_WRONG_FORMAT, "[option]");
+    else print_error(ARG_WRONG_FORMAT, "[option]");
 
     return args;
 }
