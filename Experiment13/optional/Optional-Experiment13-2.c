@@ -3,72 +3,52 @@
 
 typedef struct Node {
     int value;
-    struct node *next;
+    struct Node *next;
 } Node;
-typedef struct List {
-    Node *head, *tail;
-    int size;
-} List;
 
-List create_List() {
-    List list;
-    list.head = NULL;
-    list.tail = NULL;
-    list.size = 0;
-    return list;
+void insert(Node *head, int value) {
+    Node *p = head;
+    while (p->next != NULL) p = p->next;
+    p->next = (Node *)malloc(sizeof(Node));
+    p->next->next = NULL;
+    p->next->value = value;
 }
 
-void insert(List *list, int value) {
-    Node *node = (Node *)malloc(sizeof(Node));
-    node->value = value;
-    node->next = NULL;
-    if (list->head == NULL) {
-        list->head = node;
-        list->tail = node;
-    } 
-    else {
-        list->tail->next = node;
-        list->tail = node;
-    }
-    list->size++;
-}
-
-void delete(List* list, Node* node_pre) {
-    if (node_pre == NULL) {
-        Node *temp = list->head;
-        list->head = list->head->next;
-        free(temp);
-    } 
-    else {
-        Node *temp = node_pre->next;
-        node_pre->next = node_pre->next->next;
-        free(temp);
-    }
-    list->size--;
-}
-
-Node* get_min(List *list) {
-    Node *node = list->head;
-    Node *min = node, *prev = NULL, *min_prev = NULL;
-    while (node != NULL) {
-        if (node->value < min->value) {
-            min = node;
-            min_prev = prev;
+void del(Node *head, int value) {
+    Node *p = head;
+    while (p->next != NULL) {
+        if (p->next->value == value) {
+            Node *q = p->next;
+            p->next = p->next->next;
+            free(q);
+            break;
         }
-        node = node->next;
-        prev = node;
+        p = p->next;
     }
-    return min_prev;
+}
+
+int get_min(Node *head) {
+    Node *p = head;
+    int min = 0x7fffffff;
+    while (p->next != NULL) {
+        if (p->next->value < min) min = p->next->value;
+        p = p->next;
+    }
+    printf("%d ", min);
+    return min;
 }
 
 int main() {
-    List list = create_List();
-    insert(&list, 1); insert(&list, 2); insert(&list, 3); insert(&list, 4); insert(&list, 5);
-    while (list.size > 0) {
-        Node *min_prev = get_min(&list);
-        if (min_prev == NULL) printf("%d ", list.head->value);
-        else printf("%d ", min_prev->next->value);
-        delete(&list, min_prev);
+    int n; scanf("%d", &n);
+    Node *head = (Node *)malloc(sizeof(Node));
+    head->next = NULL; head->value = -1;
+    for (int i=1; i<=n; ++i) {
+        int val; scanf("%d", &val);
+        insert(head, val);
+    }
+    while (head->next != NULL) {
+        int min = get_min(head);
+        del(head, min);
     }
     return 0;
 }

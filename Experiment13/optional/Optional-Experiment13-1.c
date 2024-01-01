@@ -59,14 +59,19 @@ void print_list(List *list) {
 }
 
 int main() {
+    int n; scanf("%d", &n);
     List list = create_list();
-    insert(&list, 1, 1);
-    insert(&list, 2, 2);
-    insert(&list, 3, 3);
-    insert(&list, 4, 4);
-    insert(&list, 5, 5);
+    for (int i=1; i<=n; ++i) {
+        int idx, val;
+        scanf("%d%d", &idx, &val);
+        insert(&list, idx, val);
+    }
     print_list(&list);
-    delete_by_index(&list, 3);
-    print_list(&list);
+    int m; scanf("%d", &m);
+    for (int i=1; i<=m; ++i) {
+        int idx; scanf("%d", &idx);
+        delete_by_index(&list, idx);
+        print_list(&list);
+    }
     return 0;
 }

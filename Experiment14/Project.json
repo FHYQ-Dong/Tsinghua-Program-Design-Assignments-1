@@ -1,6 +1,6 @@
 {
-    "Name": "Experiment13-董皓彧",
-    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment13",
+    "Name": "Experiment14-董皓彧",
+    "Url": "https://github.com/FHYQ-Dong/Tsinghua-Program-Design-Assignments/tree/main/Experiment14",
     "Environment": [
         "gcc.exe (x86_64-win32-seh-rev1, Built by MinGW-Builds project) 13.2.0",
         "Visual Stdio Code 1.84.2"
@@ -8,22 +8,22 @@
     "Experiments": {
         "compulsive": [
             {
-                "Name": "Experiment13-1",
+                "Name": "Experiment14-1",
                 "Problem": "学生信息统计查询（学号、姓名、性别、出生日期、分数）",
                 "Input-Format": "命令行工具，输入 ./executable.exe --help 查看用法",
                 "Output-Format": "略",
-                "Path-to-C": "compulsive/Experiment13-1.c",
-                "Path-to-EXE": "compulsive/Experiment13-1.exe",
+                "Path-to-C": "compulsive/Experiment14-1.c",
+                "Path-to-EXE": "compulsive/Experiment14-1.exe",
                 "Inputs": [
                 ]
             },
             {
-                "Name": "Experiment13-2",
+                "Name": "Experiment14-2",
                 "Problem": "使用枚举类型编写程序，实现输入 1-7，输出对应的英文星期单词",
                 "Input-Format": "一个数字，1-7",
                 "Output-Format": "一个单词，对应的英文星期单词",
-                "Path-to-C": "compulsive/Experiment13-2.c",
-                "Path-to-EXE": "compulsive/Experiment13-2.exe",
+                "Path-to-C": "compulsive/Experiment14-2.c",
+                "Path-to-EXE": "compulsive/Experiment14-2.exe",
                 "Inputs": [
                     "1",
                     "2",
@@ -35,12 +35,12 @@
                 ]
             },
             {
-                "Name": "Experiment13-3",
+                "Name": "Experiment14-3",
                 "Problem": "定义结构体 struct Fraction，包含两个整型成员变量 numerator 和 denominator，分别表示分子和分母。编写程序，实现分数的加法运算，并计算以下数列的和，其中 n=10",
                 "Input-Format": "无",
                 "Output-Format": "一行，两个数，为数列的和的不同表示方法，用空格隔开：\n\t第一个：xxx/xxx 形式的最简分数；\n\t第二个：小数形式的结果",
-                "Path-to-C": "compulsive/Experiment13-3.c",
-                "Path-to-EXE": "compulsive/Experiment13-3.exe",
+                "Path-to-C": "compulsive/Experiment14-3.c",
+                "Path-to-EXE": "compulsive/Experiment14-3.exe",
                 "Inputs": [
                     ""
                 ]
@@ -48,47 +48,47 @@
         ],
         "optional": [
             {
-                "Name": "Optional-Experiment13-1",
+                "Name": "Optional-Experiment14-1",
                 "Problem": "定义一个双向链表，实现插入和按下标删除的函数",
                 "Input-Format": "共 n+m+2 行：\n\t第一行：一个整数 n，表示插入的元素个数；\n\t接下来 n 行，每行两个整数，表示插入的元素的下标和值；\n\t接下来一行，一个整数 m，表示删除的元素个数；\n\t接下来 m 行，每行一个整数，表示删除的元素的下标",
                 "Output-Format": "共 n+m 行：\n\t第一行：n 个 (index, value) 形式的元组，表示插入后的链表；\n\t接下来 m 行，每行表示删除一个元素后的链表",
-                "Path-to-C": "optional/Optional-Experiment13-1.c",
-                "Path-to-EXE": "optional/Optional-Experiment13-1.exe",
+                "Path-to-C": "optional/Optional-Experiment14-1.c",
+                "Path-to-EXE": "optional/Optional-Experiment14-1.exe",
                 "Inputs": [
                     "5\n0 1\n1 2\n2 3\n3 4\n4 5\n3\n0\n2\n4",
                     "10\n0 1\n1 2\n2 3\n3 4\n4 5\n5 6\n6 7\n7 8\n8 9\n9 10\n5\n0\n2\n4\n6\n8"
                 ]
             },
             {
-                "Name": "Optional-Experiment13-2",
+                "Name": "Optional-Experiment14-2",
                 "Problem": "定义一个链表，其元素的值均为正整数。反复找出链表中最小的元素，将其从链表中删除，直到链表为空为止。输出每次删除的元素值。",
                 "Input-Format": "共 2 行：\n\t第一行：一个整数 n，表示链表的元素个数；\n\t第二行：n 个整数，用空格隔开，表示链表的元素值",
                 "Output-Format": "共 n 个整数，用空格隔开，表示每次删除的元素值",
-                "Path-to-C": "optional/Optional-Experiment13-2.c",
-                "Path-to-EXE": "optional/Optional-Experiment13-2.exe",
+                "Path-to-C": "optional/Optional-Experiment14-2.c",
+                "Path-to-EXE": "optional/Optional-Experiment14-2.exe",
                 "Inputs": [
                     "5\n1 2 3 4 5",
                     "10\n6239 303 121 5 93023 40 235 97 875 124"
                 ]
             },
             {
-                "Name": "Optional-Experiment13-3",
+                "Name": "Optional-Experiment14-3",
                 "Problem": "执行下列程序的输出结果是？",
                 "Input-Format": "无",
                 "Output-Format": "程序的输出结果（具体解析见注释）",
-                "Path-to-C": "optional/Optional-Experiment13-3.c",
-                "Path-to-EXE": "optional/Optional-Experiment13-3.exe",
+                "Path-to-C": "optional/Optional-Experiment14-3.c",
+                "Path-to-EXE": "optional/Optional-Experiment14-3.exe",
                 "Inputs": [
                     ""
                 ]
             },
             {
-                "Name": "Optional-Experiment13-4",
+                "Name": "Optional-Experiment14-4",
                 "Problem": "使用循环链表解决约瑟夫问题，即 n 个人围成一圈，从第一个人开始报数，报到 3 的人出列，再由下一个人重新从 1 开始报数，报到 3 的人出列，如此循环，直到剩余 2 人，输出最后剩余的两个人的编号。从 1 开始编号。",
                 "Input-Format": "一个整数，总人数",
                 "Output-Format": "两个整数，用空格隔开，最后剩余的两个人的编号",
-                "Path-to-C": "optional/Optional-Experiment13-4.c",
-                "Path-to-EXE": "optional/Optional-Experiment13-4.exe",
+                "Path-to-C": "optional/Optional-Experiment14-4.c",
+                "Path-to-EXE": "optional/Optional-Experiment14-4.exe",
                 "Inputs": [
                     "5",
                     "10",
