@@ -12,7 +12,7 @@ int main() {
     }
     str = (char *)realloc(str, (len+1)*sizeof(char));
     str[len] = '\0';
-    for (int i=0; i<len; ++i) str[i] = str[i] > 'a' && str[i] < 'z' ? str[i] - 'a' + 'A' : str[i];
+    for (int i=0; i<len; ++i) str[i] = str[i] >= 'a' && str[i] <= 'z' ? str[i] - 'a' + 'A' : str[i];
     
     FILE* fin = fopen("upper.txt", "w");
     if (fin == NULL) return 1;
@@ -21,7 +21,7 @@ int main() {
 
     FILE* fout = fopen("upper.txt", "r");
     if (fout == NULL) return 1;
-    fscanf(fout, "%s", str);
+    str = fgets(str, len+1, fout);
     printf("%s", str);
     fclose(fout);
     return 0;

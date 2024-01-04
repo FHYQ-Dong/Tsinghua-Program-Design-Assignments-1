@@ -33,7 +33,7 @@ int main() {
         "110", "Mao", "F", "18", "94.5"
     };
 
-    FILE* fin = open_file("stu.dat", "wb");
+    FILE* fin = open_file("stu.dat", "wb+");
     fwrite(stu1, sizeof(Student), 10, fin);
     fclose(fin);
     fin = open_file("stu.dat", "rb");
@@ -43,7 +43,7 @@ int main() {
     stat("stu.dat", &buf);
     int size = buf.st_size / sizeof(Student);
     Student* stu2 = (Student*)malloc(sizeof(Student) * size);
-    FILE* fout = open_file("stu.dat", "rb");
+    FILE* fout = open_file("stu.dat", "rb+");
     fread(stu2, sizeof(Student), size, fout);
     fclose(fout);
 
