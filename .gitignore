@@ -53,6 +53,8 @@ dkms.conf
 
 # .vscode
 **/.vscode
+# .vs
+**/.vs
 
 # exe
 *.exe
