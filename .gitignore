@@ -99,3 +99,4 @@ CMakeLists.txt.user
 
 # Release
 **/Release
+/Extra-Experiment-SSP/client/CMakeSettings.json
