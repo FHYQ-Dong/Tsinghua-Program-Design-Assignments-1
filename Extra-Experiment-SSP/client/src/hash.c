@@ -126,14 +126,14 @@ void sha256(const unsigned char *data, size_t len, unsigned char *out) {
 }
 
 void hash_with_salt(const unsigned char *data, size_t len, unsigned char *out){
-    unsigned char *data_with_salt = (unsigned char *)malloc(sizeof(unsigned char) * (len + 20));
+    const unsigned char salt[] = "FHYQ-Dong-SSP";
+    size_t salt_len = strlen(salt);
+    unsigned char *data_with_salt = (unsigned char *)malloc(sizeof(unsigned char) * (len + salt_len));
     if (data_with_salt == NULL) {
         printf("No enough space to run the program!\n");
         exit(1);
     }
     memcpy(data_with_salt, data, len);
-    const unsigned char *salt = "FHYQ-Dong-SSP";
-    size_t salt_len = strlen(salt);
     memcpy(data_with_salt + len, salt, salt_len);
     sha256(data_with_salt, len + salt_len, out);
     free(data_with_salt);

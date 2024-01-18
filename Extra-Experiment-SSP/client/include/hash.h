@@ -6,7 +6,7 @@
 #include<stdio.h>
 #include<stdint.h>
 #include<stdlib.h>
-#pragma warning(disable:6386)
+#pragma warning(disable: 6386)
 
 #define SHA256_BLOCK_SIZE 32 // SHA256 outputs a 32 byte digest
 
